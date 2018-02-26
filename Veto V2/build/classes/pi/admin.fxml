@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="477.0" prefWidth="956.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pi.AdminController">
+   <children>
+      <TableView fx:id="tableVeto" layoutX="10.0" layoutY="102.0" prefHeight="268.0" prefWidth="936.0">
+        <columns>
+          <TableColumn fx:id="idcolumn" prefWidth="26.0" text="ID" />
+          <TableColumn fx:id="nomcolumn" prefWidth="63.0" text="NOM" />
+            <TableColumn fx:id="prenomcolumn" prefWidth="84.0" text="PRENOM" />
+            <TableColumn fx:id="mailcolumn" prefWidth="112.0" text="Email" />
+            <TableColumn fx:id="telcolumn" prefWidth="83.0" text="TELEPHONE" />
+            <TableColumn fx:id="ruecolumn" prefWidth="124.0" text="RUE" />
+            <TableColumn fx:id="villecolumn" prefWidth="68.0" text="VILLE" />
+            <TableColumn fx:id="gouvernoratcolumn" prefWidth="103.0" text="GOUVERNORAT" />
+            <TableColumn fx:id="codepostalcolumn" prefWidth="94.0" text="CODE PASTALE" />
+            <TableColumn fx:id="imagecolumn" prefWidth="60.0" text="IMAGE" />
+            <TableColumn fx:id="desccolumn" prefWidth="118.0" text="DESCRIPTION" />
+        </columns>
+      </TableView>
+      <Label layoutX="367.0" layoutY="14.0" prefHeight="58.0" prefWidth="223.0" text="Veto Details">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Label>
+      <Button fx:id="delete" layoutX="10.0" layoutY="381.0" mnemonicParsing="false" onAction="#delete" prefHeight="25.0" prefWidth="123.0" text="DELETE" />
+      <TextField fx:id="rechercheid" layoutX="281.0" layoutY="72.0" onAction="#recherche" prefHeight="25.0" prefWidth="382.0" />
+   </children>
+</AnchorPane>
