@@ -6,6 +6,8 @@
 
 package Entities;
 
+import java.util.logging.Logger;
+
 /**
  *
  * @author LENOVO
@@ -16,15 +18,122 @@ public class Publication {
     private String description;
     private String image;
     private int iduser;
+    private String date;
+    private String time;
+    private String photoName;
+    private String signall;
+
+    public Publication(String type, String description, String image, int iduser, String date, String time, String photoName, String signall) {
+        this.type = type;
+        this.description = description;
+        this.image = image;
+        this.iduser = iduser;
+        this.date = date;
+        this.time = time;
+        this.photoName = photoName;
+        this.signall = signall;
+    }
+
+    public String getSignall() {
+        return signall;
+    }
+
+    public void setSignall(String signall) {
+        this.signall = signall;
+    }
+    
+      
+    public Publication() {
+    }
+
+    public Publication(String type, String description, String image, int iduser, String date, String time, String photoName) {
+        this.type = type;
+        this.description = description;
+        this.image = image;
+        this.iduser = iduser;
+        this.date = date;
+        this.time = time;
+        this.photoName = photoName;
+    }
 
     public Publication(String type, String description, String image, int iduser) {
         this.type = type;
         this.description = description;
         this.image = image;
         this.iduser = iduser;
+    }    
+
+    public Publication(String type, String description, String image) {
+        this.type = type;
+        this.description = description;
+        this.image = image;
     }
 
-    public Publication() {
+    public Publication(int idpub, String type, String description, String image, int iduser) {
+        this.idpub = idpub;
+        this.type = type;
+        this.description = description;
+        this.image = image;
+        this.iduser = iduser;
+    }
+    
+    public Publication(int id, String type, String description, String image, int iduser, String date, String time) {
+        this.idpub = id;
+        this.type = type;
+        this.description = description;
+        this.image = image;
+        this.iduser = iduser;
+        this.date = date;
+        this.time = time;
+    }  
+
+    public Publication(String type, String description, String image, int iduser, String date, String time) {
+        this.type = type;
+        this.description = description;
+        this.image = image;
+        this.iduser = iduser;
+        this.date = date;
+        this.time = time;
+    }   
+
+    public Publication(int idpub, String type, String description, String image, int iduser, String date, String time, String photoName) {
+        this.idpub = idpub;
+        this.type = type;
+        this.description = description;
+        this.image = image;
+        this.iduser = iduser;
+        this.date = date;
+        this.time = time;
+        this.photoName = photoName;
+    }
+
+    public Publication(int idpub) {
+        this.idpub = idpub;
+    }
+    
+
+    public String getPhotoName() {
+        return photoName;
+    }
+
+    public void setPhotoName(String photoName) {
+        this.photoName = photoName;
+    }
+    
+    public String getDate() {
+        return date;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
     }
 
     public int getIdpub() {
@@ -65,18 +174,7 @@ public class Publication {
 
     public void setIduser(int iduser) {
         this.iduser = iduser;
-    }
-
-    public Publication(int idpub, String type, String description, String image, int iduser) {
-        this.idpub = idpub;
-        this.type = type;
-        this.description = description;
-        this.image = image;
-        this.iduser = iduser;
-    }
-
-   
-   
+    }  
 
     @Override
     public int hashCode() {
@@ -102,8 +200,11 @@ public class Publication {
 
     @Override
     public String toString() {
-        return "Publication{" + "type=" + type + ", description=" + description + ", image=" + image + ", iduser=" + iduser + '}';
+        return "Publication{" + "idpub=" + idpub + ", type=" + type + ", description=" + description + ", image=" + image + ", iduser=" + iduser + ", date=" + date + ", time=" + time + '}';
     }
+    
+    
+    
 
     
     
