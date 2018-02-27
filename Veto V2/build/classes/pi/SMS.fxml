@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="439.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pi.SMSController">
+   <children>
+      <Label layoutX="74.0" layoutY="149.0" text="NUMBER" />
+      <Label layoutX="74.0" layoutY="183.0" text="MESSAGE" />
+      <TextField fx:id="txtnumber" layoutX="141.0" layoutY="147.0" />
+      <TextArea fx:id="txtmess" layoutX="141.0" layoutY="182.0" prefHeight="144.0" prefWidth="200.0" />
+      <Button layoutX="414.0" layoutY="350.0" mnemonicParsing="false" onAction="#send" text="send" />
+   </children>
+</AnchorPane>

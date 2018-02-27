@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="768.0" prefWidth="1360.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pi.ProfilController">
+   <children>
+      <ImageView fx:id="imageView" fitHeight="296.0" fitWidth="407.0" layoutX="91.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="desclabel" layoutX="595.0" layoutY="160.0" text="Label">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label layoutX="592.0" layoutY="85.0" text="Dr">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+      <Label fx:id="nomlabel" layoutX="656.0" layoutY="85.0" text="Label">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+      <Label fx:id="prenomlabel" layoutX="804.0" layoutY="85.0" text="Label">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+      <Button fx:id="rdvbtn" layoutX="752.0" layoutY="595.0" mnemonicParsing="false" onAction="#prendreRdv" prefHeight="40.0" prefWidth="215.0" text="Prendre un rendez-vous" />
+      <Button fx:id="budgetbtn" layoutX="752.0" layoutY="653.0" mnemonicParsing="false" onAction="#AfficherFormulaireBudget" prefHeight="40.0" prefWidth="215.0" text="Connaitre le budget du rendez-vous" />
+      <DatePicker fx:id="dateP" layoutX="720.0" layoutY="523.0" onAction="#datepicker" prefHeight="40.0" prefWidth="263.0" />
+      <ComboBox fx:id="combo" layoutX="721.0" layoutY="459.0" prefHeight="40.0" prefWidth="263.0" />
+      <Label layoutX="656.0" layoutY="419.0" prefHeight="27.0" prefWidth="407.0" text="Choisissez l'heure et la date de votre rendez-vous:">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+   </children>
+</AnchorPane>
