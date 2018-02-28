@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.lynden.gmapsfx.GoogleMapView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="pane" prefHeight="768.0" prefWidth="1358.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.FXMLGmapsController">
+     <GoogleMapView fx:id="googleMapView" layoutX="10" layoutY="10" prefHeight="755.0" prefWidth="898.0">
+      <children>
+         <JFXButton fx:id="recenter" layoutX="130" layoutY="10" onAction="#recenter" text="RECENTER" textFill="#ffcfcf" />
+         <TextField fx:id="radius" layoutX="220" layoutY="10" prefHeight="27.0" prefWidth="62.0" />
+         <JFXButton fx:id="showCircle" layoutX="280" layoutY="10" onAction="#showCircleR" text="SHOW" textFill="#ffcfcf" />
+         <Label fx:id="distanceToTarget" layoutX="150" layoutY="655" text="Distance to target + Drinving time: [No targets selected]" textFill="#ffcfcf">
+            <font>
+               <Font size="15.0" />
+            </font></Label>
+         <TextField fx:id="radiusFetch" layoutX="620" layoutY="10" onAction="#fetchOnRadius" prefHeight="27.0" prefWidth="131.0" />
+         <Button fx:id="location" layoutX="420" layoutY="10" mnemonicParsing="false" onAction="#getLocation" prefHeight="46.0" prefWidth="127.0" text="get my position" />
+      </children></GoogleMapView>
+   <TableView fx:id="tableAdo" layoutX="913.0" layoutY="89.0" onMouseClicked="#check" prefHeight="550.0" prefWidth="442.0">
+     <columns>
+       <TableColumn fx:id="Cimage" prefWidth="264.32098388671875" text="IMAGE" />
+       <TableColumn fx:id="Cinfo" prefWidth="176.67901611328125" text="INFO" />
+     </columns>
+   </TableView>
+   <TextField fx:id="field" layoutX="913.0" layoutY="11.0" onAction="#searchAction" prefHeight="60.0" prefWidth="442.0" />
+   <JFXButton fx:id="calcul" layoutX="1221.0" layoutY="666.0" onAction="#calcul" prefHeight="1.0" prefWidth="17.0" text="calcul" />
+   
+    
+</AnchorPane>

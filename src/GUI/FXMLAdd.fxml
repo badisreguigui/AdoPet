@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="pane" prefHeight="768.0" prefWidth="1360.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.FXMLAddController">
+   <children>
+      <Label layoutX="564.0" layoutY="13.0" text="ADD YOUR PROFILE" textFill="#ff9b4f">
+         <font>
+            <Font name="System Bold" size="32.0" />
+         </font></Label>
+      <Label fx:id="nameLabel" layoutX="151.0" layoutY="84.0" text="NAME" />
+      <JFXTextField fx:id="name" layoutX="262.0" layoutY="67.0" />
+      <Label fx:id="breedLabel" layoutX="149.0" layoutY="122.0" text="BREED" />
+      <JFXTextField fx:id="breed" layoutX="260.0" layoutY="105.0" />
+      <Label fx:id="ageLabel" layoutX="148.0" layoutY="162.0" text="AGE" />
+      <JFXTextField fx:id="age" layoutX="260.0" layoutY="146.0" />
+      <Label fx:id="sexLabel" layoutX="148.0" layoutY="197.0" text="SEX" />
+      <Label fx:id="colorLabel" layoutX="146.0" layoutY="232.0" text="COLOR" />
+      <Label fx:id="governateLabel" layoutX="144.0" layoutY="270.0" text="GOVERNATE" />
+      <Label fx:id="cityLabel" layoutX="148.0" layoutY="309.0" text="CITY" />
+      <Label fx:id="zipLabel" layoutX="149.0" layoutY="348.0" text="ZIP" />
+      <Label fx:id="imageLabel" layoutX="144.0" layoutY="536.0" text="IMAGE" />
+      <Label fx:id="descriptionLabel" layoutX="143.0" layoutY="394.0" text="DESCRIPTION" />
+      <JFXTextField fx:id="color" layoutX="264.0" layoutY="220.0" />
+      <JFXTextField fx:id="governate" layoutX="264.0" layoutY="258.0" />
+      <JFXTextField fx:id="city" layoutX="264.0" layoutY="297.0" />
+      <JFXTextField fx:id="zip" layoutX="263.0" layoutY="335.0" />
+      <JFXTextField fx:id="image" layoutX="7.0" layoutY="742.0" />
+      <JFXTextArea fx:id="description" layoutX="234.0" layoutY="381.0" prefHeight="130.0" prefWidth="260.0" />
+      <JFXButton fx:id="add" buttonType="RAISED" layoutX="959.0" layoutY="505.0" onAction="#addprofile" text="ADD PROFILE" />
+      <JFXButton fx:id="reset" layoutX="805.0" layoutY="492.0" onAction="#reset" text="RESET" />
+      <JFXComboBox fx:id="sex" layoutX="297.0" layoutY="183.0" />
+      <JFXButton fx:id="imageupload" layoutX="294.0" layoutY="532.0" onAction="#upload" text="UPLOAD" />
+      <ImageView fx:id="imageview" fitHeight="391.0" fitWidth="556.0" layoutX="670.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true" />
+      <JFXComboBox fx:id="type" layoutX="297.0" layoutY="611.0" />
+      <JFXComboBox fx:id="typePet" layoutX="297.0" layoutY="570.0" />
+      <Label layoutX="142.0" layoutY="582.0" text="PET'S TYPE" />
+      <Label layoutX="140.0" layoutY="620.0" text="YOU WANT " />
+   </children>
+</AnchorPane>

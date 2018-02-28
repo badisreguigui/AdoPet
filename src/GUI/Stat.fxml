@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="back" prefHeight="700.0" prefWidth="1340.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.StatController">
+   <children>
+      <Pane layoutX="282.0" layoutY="50.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="603.0" prefWidth="726.0" style="-fx-border-width: 4px; -fx-border-color: white;">
+         <children>
+            <PieChart fx:id="pieChart" layoutX="108.0" layoutY="131.0" prefHeight="382.0" prefWidth="516.0" />
+            <Label fx:id="titre" layoutX="158.0" layoutY="31.0" prefHeight="47.0" prefWidth="403.0" text="Statistiques des publications">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Label>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+         </padding>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Pane>
+      <Label fx:id="retour" layoutX="62.0" layoutY="58.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="back" prefHeight="700.0" prefWidth="1340.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.ModifPubController">
+   <children>
+      <Label layoutX="197.0" layoutY="165.0" prefHeight="20.0" prefWidth="49.0" text="Type :" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="type" layoutX="322.0" layoutY="163.0" prefHeight="20.0" prefWidth="189.0" />
+      <TextArea fx:id="description" layoutX="197.0" layoutY="226.0" prefHeight="225.0" prefWidth="329.0" promptText="Description.." />
+      <TextArea fx:id="url" layoutX="878.0" layoutY="157.0" prefHeight="33.0" prefWidth="211.0" />
+      <ImageView fx:id="image" fitHeight="225.0" fitWidth="346.0" layoutX="743.0" layoutY="226.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="photo" layoutX="743.0" layoutY="242.0" prefHeight="17.0" prefWidth="33.0" />
+      <Label fx:id="photoName" layoutX="854.0" layoutY="487.0" prefHeight="17.0" prefWidth="124.0" />
+      <Label fx:id="titre" layoutX="476.0" layoutY="58.0" text="Modifier ma publication">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="737.0" layoutY="163.0" onAction="#Modifimage" text="Modifier l'image" textFill="WHITE" />
+      <JFXButton layoutX="600.0" layoutY="534.0" onAction="#modifier" text="Modifier" textFill="WHITE">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="retour" layoutX="83.0" layoutY="73.0" />
+   </children>
+</AnchorPane>
