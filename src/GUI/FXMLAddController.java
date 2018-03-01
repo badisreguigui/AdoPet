@@ -133,6 +133,8 @@ public class FXMLAddController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        
+        
         add.setStyle(
                 "-fx-background-radius: 5em; " +
                 "-fx-min-width: 90px; " +
@@ -342,29 +344,29 @@ public class FXMLAddController implements Initializable {
             
             // swtich to specific profile display with pet name check 
             
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLDisplayProfile.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLDisplayAll.fxml"));
             Parent root = loader.load();
-            FXMLDisplayProfileController spc = loader.getController();
+            FXMLDisplayAllController spc = loader.getController();
 //            spc.setSuccess("Voiture "+marque.getText()+" "+couleur.getText());
 //            spc.setValue(marque.getText());
 //            marque.getScene().setRoot(root);
             //spc.setNameLabel(name.getText());
             
             // display in the new page the profile you just added now
-            spc.setVal(name.getText());
-            spc.setName(sp.getPet(spc.getVal()).getName_pet());
-            spc.setBreed(sp.getPet(spc.getVal()).getBreed());
-            spc.setAge(sp.getPet(spc.getVal()).getAge());
-            spc.setSex(sp.getPet(spc.getVal()).getSex());
-            spc.setColor(sp.getPet(spc.getVal()).getColor());
-            spc.setGovernate(sp.getPet(spc.getVal()).getGovernate());
-            spc.setCity(sp.getPet(spc.getVal()).getCity());
-            spc.setZip(sp.getPet(spc.getVal()).getZip());
-            spc.setDescription(sp.getPet(spc.getVal()).getDescription());
-            spc.setPet_image(sp.getPet(spc.getVal()).getPet_image()); 
-            spc.setImageview(image1);
-            spc.setImageURL(path);
-            //System.out.println(path);
+//            spc.setVal(name.getText());
+//            spc.setName(sp.getPet(spc.getVal()).getName_pet());
+//            spc.setBreed(sp.getPet(spc.getVal()).getBreed());
+//            spc.setAge(sp.getPet(spc.getVal()).getAge());
+//            spc.setSex(sp.getPet(spc.getVal()).getSex());
+//            spc.setColor(sp.getPet(spc.getVal()).getColor());
+//            spc.setGovernate(sp.getPet(spc.getVal()).getGovernate());
+//            spc.setCity(sp.getPet(spc.getVal()).getCity());
+//            spc.setZip(sp.getPet(spc.getVal()).getZip());
+//            spc.setDescription(sp.getPet(spc.getVal()).getDescription());
+//            spc.setPet_image(sp.getPet(spc.getVal()).getPet_image()); 
+//            spc.setImageview(image1);
+//            spc.setImageURL(path);
+//            //System.out.println(path);
             name.getScene().setRoot(root);
             
 

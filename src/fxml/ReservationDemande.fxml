@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="reservation" prefHeight="400.0" prefWidth="600.0" style="-fx-background-image: url(&quot;/Images/adopet1.jpg&quot;); -fx-background-size: 600 400;" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ReservationDemandeController">
+   <children>
+      <Label fx:id="ddtitre" layoutX="42.0" layoutY="139.0" text="Nom complet :" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Label fx:id="dftitre" layoutX="361.0" layoutY="139.0" text="CIN :" textFill="WHITE">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="hdtitre" layoutX="42.0" layoutY="222.0" text="Numéro tel. :" textFill="WHITE" AnchorPane.leftAnchor="42.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <JFXButton fx:id="res" layoutX="268.0" layoutY="340.0" onAction="#genererPDF" style="-fx-background-color: black;" text="Réserver" textFill="WHITE" AnchorPane.leftAnchor="254.5" AnchorPane.rightAnchor="254.5">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="title" layoutX="135.0" layoutY="67.0" prefHeight="27.0" prefWidth="286.0" text="Réservation de Pet Sitter" textFill="WHITE" AnchorPane.leftAnchor="135.0" AnchorPane.rightAnchor="179.0" AnchorPane.topAnchor="45.0">
+         <font>
+            <Font name="Arial Bold" size="24.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <TextField fx:id="cin" layoutX="361.0" layoutY="156.0" />
+      <TextField fx:id="tel" layoutX="42.0" layoutY="243.0" />
+      <TextField fx:id="nom" layoutX="42.0" layoutY="156.0" />
+      <TextField fx:id="adresse" layoutX="361.0" layoutY="243.0" />
+      <Label fx:id="adresset" layoutX="361.0" layoutY="222.0" text="Adresse :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+   </children>
+</AnchorPane>

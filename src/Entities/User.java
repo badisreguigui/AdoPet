@@ -22,6 +22,7 @@ public class User {
     String ville;
     String gouvernorat;
     String codePostal;
+    String role;
     
     private String login;
     private String password;
@@ -29,6 +30,13 @@ public class User {
     public User() {
     }
 
+    public User(int id, String login, String password,String role) {
+        this.id = id;
+        this.role = role;
+        this.login = login;
+        this.password = password;
+    }
+    
     public User(int id, String login, String password) {
         this.id = id;
         this.login = login;
@@ -94,6 +102,14 @@ public class User {
     public void setImage(String image) {
         this.image = image;
     }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
     
     
 
@@ -125,7 +141,9 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" + "id=" + id + ", login=" + login + ", password=" + password + '}';
+        return "User{" + "id=" + id + ", role=" + role + ", login=" + login + ", password=" + password + '}';
     }
+
+    
     
 }

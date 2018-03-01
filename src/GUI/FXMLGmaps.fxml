@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" fx:id="pane" prefHeight="768.0" prefWidth="1358.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.FXMLGmapsController">
+<AnchorPane id="AnchorPane" fx:id="pane" prefHeight="768.0" prefWidth="1358.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.FXMLGmapsController">
      <GoogleMapView fx:id="googleMapView" layoutX="10" layoutY="10" prefHeight="755.0" prefWidth="898.0">
       <children>
          <JFXButton fx:id="recenter" layoutX="130" layoutY="10" onAction="#recenter" text="RECENTER" textFill="#ffcfcf" />
@@ -30,7 +30,8 @@
      </columns>
    </TableView>
    <TextField fx:id="field" layoutX="913.0" layoutY="11.0" onAction="#searchAction" prefHeight="60.0" prefWidth="442.0" />
-   <JFXButton fx:id="calcul" layoutX="1221.0" layoutY="666.0" onAction="#calcul" prefHeight="1.0" prefWidth="17.0" text="calcul" />
+   <JFXButton fx:id="calcul" layoutX="1085.0" layoutY="742.0" onAction="#calcul" prefHeight="1.0" prefWidth="17.0" text="calcul" />
+   <JFXButton fx:id="goHome" layoutX="1225.0" layoutY="663.0" onAction="#goHome" text="home" />
    
     
 </AnchorPane>

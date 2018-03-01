@@ -9,6 +9,7 @@ import Entities.Publication;
 import Entities.Session;
 import Services.ServicePublication;
 import Services.UserService;
+import com.jfoenix.controls.JFXButton;
 import com.restfb.BinaryAttachment;
 import com.restfb.DefaultFacebookClient;
 import com.restfb.FacebookClient;
@@ -71,10 +72,25 @@ public class AffichagefrontController implements Initializable {
     Session session = Session.getInstance();
     @FXML
     private AnchorPane back;
+    @FXML
+    private JFXButton goHome;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TO
+        goHome.setStyle(
+                
+                "-fx-min-width: 70px; " +
+                "-fx-min-height: 70px; " +
+                "-fx-max-width: 140px; " +
+                "-fx-max-height: 140px;"
+        );
+        File file4 = new File("C:\\Users\\Public\\Pictures\\Sample Pictures\\home.png");
+        //Image image = new Image(file.toURI().toString());
+        String pt4 = file4.toURI().toString();
+        Image image4 = new Image(pt4, 70 ,70, false, false);
+        goHome.setGraphic(new ImageView(image4));
+        goHome.setText("");
 
         VBox tilePane = new VBox();
         tilePane.setPadding(new javafx.geometry.Insets(10, 5, 5, 5));
@@ -565,5 +581,14 @@ public class AffichagefrontController implements Initializable {
         FacebookType response = fbClient.publish("me/photos", FacebookType.class,
                 BinaryAttachment.with("photo.png", fis), Parameter.with("message", pub.getDescription()));
 
+    }
+
+    @FXML
+    private void goHome(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("Acceuil.fxml"));
+                        Parent root5 = loader.load();
+                        AcceuilController spc = loader.getController();
+                                                
+                        back.getScene().setRoot(root5);
     }
 }

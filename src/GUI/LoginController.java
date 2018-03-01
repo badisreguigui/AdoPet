@@ -8,6 +8,7 @@ package GUI;
 import Entities.Session;
 import Entities.User;
 import Services.UserService;
+import com.jfoenix.controls.JFXButton;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.ResultSet;
@@ -24,6 +25,7 @@ import javafx.scene.Parent;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
 
 /**
  * FXML Controller class
@@ -40,6 +42,10 @@ public class LoginController implements Initializable {
     private Button loginbtn;
     
     Session session = Session.getInstance();
+    @FXML
+    private AnchorPane log;
+    @FXML
+    private JFXButton ajout;
     /**
      * Initializes the controller class.
      */
@@ -48,6 +54,8 @@ public class LoginController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+                                        log.setStyle("-fx-background-image:url('file:///C:/Users/Kapio/Desktop/adopet2.jpg')");
+
         // TODO
     }    
 
@@ -66,9 +74,9 @@ public class LoginController implements Initializable {
         }
         else if(log.size()==1 && !logintxt.getText().equals("admin")&& !passtxt.getText().equals("admin")) {
             
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("Affichagefront.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("Acceuil.fxml"));
            Parent root = loader.load();
-           AffichagefrontController spc = loader.getController();
+           AcceuilController spc = loader.getController();
             logintxt.getScene().setRoot(root);
                 session.addSession(log.get(0));
             
@@ -76,13 +84,24 @@ public class LoginController implements Initializable {
         }
         else if(log.size()==1 && logintxt.getText().equals("admin")&& passtxt.getText().equals("admin")) {
             
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("boutcateg.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("Acceuil_1.fxml"));
            Parent root = loader.load();
-            BoutcategController spc = loader.getController();
+            AcceuilControllerAdmin sp = loader.getController();
             logintxt.getScene().setRoot(root);
-            session.addSession(u);
+            session.addSession(log.get(0));
             System.out.println(session.p.toString());
         }
+    }
+
+    @FXML
+    private void ajout(ActionEvent event) throws IOException {
+        System.out.println("ok");
+                    FXMLLoader loader=new FXMLLoader(getClass().getResource("AjoutVeto.fxml"));
+                    Parent root5;
+                    root5 = loader.load();
+                    AjoutVetoController sp=loader.getController();
+                    logintxt.getScene().setRoot(root5);
+
     }
     
     

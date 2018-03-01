@@ -163,9 +163,11 @@ public class ShopController implements Initializable {
                 vbox1.setPadding(new javafx.geometry.Insets(10));
                 vbox1.setSpacing(0);
                 //vbox1.setTranslateX(0);
+                                vbox1.setTranslateX(50);
+
                 vbox1.getChildren().addAll(label1,label2,label3,label6,label7,label4,rating);
                 
-                vbox1.setStyle("-fx-border-width: 2;" +"-fx-background-color: rgba(255,255,255,0.9)");
+                vbox1.setStyle("-fx-border-width: 2;" +"-fx-background-color: rgba(204,229,255,0.7)");
                 tilePane.getChildren().add(vbox1);
                 tilePane.setStyle("-fx-background-color: rgba(109,207,246,1)");
                 
@@ -235,10 +237,58 @@ public class ShopController implements Initializable {
                 hbox1.setPadding(new javafx.geometry.Insets(15, 12, 15, 12));
                 hbox1.setSpacing(10);
                 Label lb5= new Label("Bienvenue dans notre Store");
+                                 lb5.setStyle("-fx-text-fill:orange");
+
                 lb5.setFont(new Font("Cambria", 32));
+                Label lb6 = new Label();
+                Image image6 = new Image("file:///C:/Users/Public/Pictures/Sample%20Pictures/cart.png",50,50,true,true);
+        lb6.setGraphic(new ImageView(image6));
+                //lb5.setStyle("-fx-background-colo");
+                lb6.setTranslateX(300);
+                lb6.addEventHandler(MouseEvent.MOUSE_CLICKED, event -> {
+                    try {
+                        //System.out.println(Integer.parseInt(label3.getText()));
+                        //
+                        FXMLLoader loader = new FXMLLoader(getClass().getResource("cart.fxml"));
+                        Parent root5 = loader.load();
+                        CartController spc = loader.getController();
+                                                
+                        Scene sc = new Scene(root5);
+                        Stage st = new Stage();
+                        st.setScene(sc);
+                        st.show();
+                    }
+                    catch (IOException ex) {
+                        Logger.getLogger(ShopController.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                    
+                    event.consume();
+                });
+                Label lb7 = new Label();
+                Image image7 = new Image("file:///C:/Users/Public/Pictures/Sample%20Pictures/signout.png",50,50,true,true);
+       lb7.setGraphic(new ImageView(image7));
+                //lb5.setStyle("-fx-background-colo");
+                lb7.setTranslateX(305);
+                lb7.addEventHandler(MouseEvent.MOUSE_CLICKED, event -> {
+                    try {
+                        //System.out.println(Integer.parseInt(label3.getText()));
+                        //
+                        session.closeSession();
+                        FXMLLoader loader = new FXMLLoader(getClass().getResource("Acceuil.fxml"));
+                        Parent root5 = loader.load();
+                        AcceuilController spc = loader.getController();
+                                                
+                        label2.getScene().setRoot(root5);
+                    }
+                    catch (IOException ex) {
+                        Logger.getLogger(ShopController.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                    
+                    event.consume();
+                });
 
                 //lb5.setStyle("-fx-background-colo");
-                hbox1.getChildren().add(lb5);
+                hbox1.getChildren().addAll(lb5,lb6,lb7);
                 hbox1.setTranslateX(450);
                 root1.setTop(hbox1);
                 
@@ -350,7 +400,7 @@ public class ShopController implements Initializable {
            right.setVisible(false);
            root1.setRight(right);
         
-           root1.getCenter().setStyle("-fx-background-color: rgba(109,207,246,1)");
+           //root1.getCenter().setStyle("-fx-background-color: rgba(109,207,246,1)");
            root1.getCenter().setTranslateX(50);
            root1.setStyle("-fx-background-image:url('file:///C:/Users/Kapio/Desktop/adopet3.jpg')"+"-fx-background-size 1400 768");
            shoppage.setStyle("-fx-background-image:url('file:///C:/Users/Kapio/Desktop/adopet3.jpg')"+"-fx-background-size 1400 768");
@@ -558,7 +608,54 @@ public class ShopController implements Initializable {
                 hbox1.setPadding(new javafx.geometry.Insets(15, 12, 15, 12));
                 hbox1.setSpacing(10);
                 Label lb5= new Label("Bienvenue dans notre Store");
-                lb5.setFont(new Font("Cambria", 32));                
+                lb5.setFont(new Font("Cambria", 32));
+                                 lb5.setStyle("-fx-text-fill:orange");
+                Label lb6 = new Label();
+                Image image6 = new Image("file:///C:/Users/Public/Pictures/Sample%20Pictures/cart.png",50,50,true,true);
+        lb6.setGraphic(new ImageView(image6));
+                //lb5.setStyle("-fx-background-colo");
+                lb6.setTranslateX(300);
+                lb6.addEventHandler(MouseEvent.MOUSE_CLICKED, event -> {
+                    try {
+                        //System.out.println(Integer.parseInt(label3.getText()));
+                        //
+                        FXMLLoader loader = new FXMLLoader(getClass().getResource("cart.fxml"));
+                        Parent root5 = loader.load();
+                        CartController spc = loader.getController();
+                                                
+                        Scene sc = new Scene(root5);
+                        Stage st = new Stage();
+                        st.setScene(sc);
+                        st.show();
+                    }
+                    catch (IOException ex) {
+                        Logger.getLogger(ShopController.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                    
+                    event.consume();
+                });
+                Label lb7 = new Label();
+                Image image7 = new Image("file:///C:/Users/Public/Pictures/Sample%20Pictures/signout.png",50,50,true,true);
+                  lb7.setGraphic(new ImageView(image7));
+                //lb5.setStyle("-fx-background-colo");
+                lb7.setTranslateX(305);
+                lb7.addEventHandler(MouseEvent.MOUSE_CLICKED, event -> {
+                    try {
+                        //System.out.println(Integer.parseInt(label3.getText()));
+                        //
+                        session.closeSession();
+                        FXMLLoader loader = new FXMLLoader(getClass().getResource("Acceuil.fxml"));
+                        Parent root5 = loader.load();
+                        AcceuilController spc = loader.getController();
+                                                
+                        label2.getScene().setRoot(root5);
+                    }
+                    catch (IOException ex) {
+                        Logger.getLogger(ShopController.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                    
+                    event.consume();
+                });
                 lb5.setTranslateX(400);
                 Hyperlink All = new Hyperlink();
                 All.setText("Shop");
@@ -579,7 +676,7 @@ public class ShopController implements Initializable {
                     event.consume();
                 });
                 
-                hbox1.getChildren().addAll(All,lb5);
+                hbox1.getChildren().addAll(All,lb5,lb6,lb7);
                 //hbox1.setTranslateX();
                 root1.setTop(hbox1);
                 

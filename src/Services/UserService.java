@@ -46,7 +46,7 @@ Connection con=DataSource.getInstance().getConnection();
     
     public ObservableList<User> Select(User p) throws SQLException{
          
-        String requete = "Select login,password,id from users where login= ? and password = ? ";
+        String requete = "Select login,password,id,role from users where login= ? and password = ? ";
         PreparedStatement st=con.prepareStatement(requete);
         st.setString(1, p.getLogin());
         st.setString(2, p.getPassword());         
@@ -55,12 +55,17 @@ Connection con=DataSource.getInstance().getConnection();
 
         res=st.executeQuery();
         while(res.next())
+            
         {
-            User u = new User(res.getInt(3),res.getString(1),res.getString(2));
+            System.out.println(res.getString(4));
+            User u = new User(res.getInt(3),res.getString(1),res.getString(2),res.getString(4));
             log.add(u);
             //System.out.println(log.toString());
         }
+                            System.out.println(log);
+
         return log;
+
     }
      public User selectuser(int id) throws SQLException {
         

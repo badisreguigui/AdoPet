@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="vbox" prefHeight="603.0" prefWidth="199.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.MenuController">
+   <children>
+      <JFXButton fx:id="btnaa" prefHeight="100.5" prefWidth="199.0" style="-fx-border-color: black;" text="Adoption &amp; accouplement" />
+      <JFXButton fx:id="btnveto" prefHeight="100.5" prefWidth="199.0" style="-fx-border-color: black;" text="Vétérinaires" />
+      <JFXButton fx:id="btnpets" accessibleText="petsitting" onAction="#goToPetSitting" prefHeight="100.5" prefWidth="199.0" style="-fx-border-color: black;" text="PetSitting" />
+      <JFXButton fx:id="btnevent" prefHeight="100.5" prefWidth="199.0" style="-fx-border-color: black;" text="Evenements" />
+      <JFXButton fx:id="btnshop" prefHeight="100.5" prefWidth="199.0" style="-fx-border-color: black;" text="e-Shop" />
+      <JFXButton fx:id="btnpub" prefHeight="100.5" prefWidth="199.0" style="-fx-border-color: black;" text="Publications" />
+   </children>
+</VBox>

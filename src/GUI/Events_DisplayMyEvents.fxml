@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="DisplayMyEvents" prefHeight="700.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Events_DisplayMyEventsController">
+    <children>
+      <TableView fx:id="affichage" layoutX="15.0" layoutY="89.0" prefHeight="275.0" prefWidth="1052.0">
+         <columns>
+            <TableColumn fx:id="ID" minWidth="0.0" prefWidth="0.0" text="ID" />
+            <TableColumn fx:id="nom" prefWidth="84.0" text="NOM" />
+            <TableColumn fx:id="type" prefWidth="106.0" text="TYPE" />
+            <TableColumn fx:id="lieu" prefWidth="79.0" text="LIEU" />
+            <TableColumn fx:id="datedebut" minWidth="0.0" prefWidth="115.0" text="DATE DEBUT" />
+            <TableColumn fx:id="datefin" minWidth="0.0" prefWidth="135.0" text="DATE FIN" />
+            <TableColumn fx:id="description" prefWidth="231.0" text="DESCRIPTION" />
+            <TableColumn fx:id="nombredeparticipants" prefWidth="179.0" text="NOMBRE DE PARTICIPANTS" />
+            <TableColumn fx:id="status" prefWidth="122.0" text="status" />
+         </columns>
+      </TableView>
+      <Label layoutX="172.0" layoutY="25.0" text="Selectionner un event pour modifier/supprimer">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
+      <GridPane fx:id="update" layoutX="61.0" layoutY="427.0" prefHeight="232.0" prefWidth="954.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="213.0" minWidth="10.0" prefWidth="58.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="378.0" minWidth="10.0" prefWidth="181.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="356.0" minWidth="10.0" prefWidth="104.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="551.0" minWidth="10.0" prefWidth="487.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="434.0" minWidth="10.0" prefWidth="171.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="lnom" text="Nom">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font></Label>
+               </children>
+            </FlowPane>
+            <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+               <children>
+                  <Label fx:id="ltype" text="Type">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font></Label>
+               </children>
+            </FlowPane>
+            <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+               <children>
+                  <Label fx:id="llieu" text="Lieu">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font></Label>
+               </children>
+            </FlowPane>
+            <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+               <children>
+                  <TextField fx:id="enom" />
+               </children>
+            </FlowPane>
+            <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <ChoiceBox fx:id="etype" prefWidth="150.0" />
+               </children>
+            </FlowPane>
+            <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <children>
+                  <ChoiceBox fx:id="elieu" prefWidth="150.0" />
+               </children>
+            </FlowPane>
+            <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <children>
+                  <Label fx:id="ldescription" text="Description">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font></Label>
+               </children>
+            </FlowPane>
+            <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <children>
+                  <Label fx:id="ldatefin" text="Date fin">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font></Label>
+               </children>
+            </FlowPane>
+            <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">
+               <children>
+                  <Label fx:id="ldatedebut" text="Date debut">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font></Label>
+               </children>
+            </FlowPane>
+            <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3">
+               <children>
+                  <DatePicker fx:id="edatedebut" />
+               </children>
+            </FlowPane>
+            <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <children>
+                  <DatePicker fx:id="edatefin" />
+               </children>
+            </FlowPane>
+            <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
+               <children>
+                  <TextArea fx:id="edescription" prefHeight="108.0" prefWidth="407.0" />
+               </children>
+            </FlowPane>
+            <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="2">
+               <children>
+                  <JFXButton onAction="#supprimer" text="Supprimer" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </FlowPane>
+            <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="1">
+               <children>
+                  <JFXButton onAction="#modifier" text="Modifier" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </FlowPane>
+         </children>
+      </GridPane>
+      <Label layoutX="153.0" layoutY="392.0" text="Notez bien qu'un event passé ou en cours ne peut plus etre modifié">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font></Label>
+      <JFXButton fx:id="retour" layoutX="14.0" layoutY="13.0" onAction="#retour" text="Retour" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

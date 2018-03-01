@@ -1,5 +1,60 @@
 {
-   "error_message" : "You have exceeded your daily request quota for this API. We recommend registering for a key at the Google Developers Console: https://console.developers.google.com/apis/credentials?project=_",
-   "results" : [],
-   "status" : "OVER_QUERY_LIMIT"
+   "results" : [
+      {
+         "address_components" : [
+            {
+               "long_name" : "Augsburg",
+               "short_name" : "A",
+               "types" : [ "locality", "political" ]
+            },
+            {
+               "long_name" : "Swabia",
+               "short_name" : "Swabia",
+               "types" : [ "administrative_area_level_2", "political" ]
+            },
+            {
+               "long_name" : "Bavaria",
+               "short_name" : "BY",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "Germany",
+               "short_name" : "DE",
+               "types" : [ "country", "political" ]
+            }
+         ],
+         "formatted_address" : "Augsburg, Germany",
+         "geometry" : {
+            "bounds" : {
+               "northeast" : {
+                  "lat" : 48.458654,
+                  "lng" : 10.959519
+               },
+               "southwest" : {
+                  "lat" : 48.2581444,
+                  "lng" : 10.7633614
+               }
+            },
+            "location" : {
+               "lat" : 48.3705449,
+               "lng" : 10.89779
+            },
+            "location_type" : "APPROXIMATE",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 48.458654,
+                  "lng" : 10.959519
+               },
+               "southwest" : {
+                  "lat" : 48.2581444,
+                  "lng" : 10.7633614
+               }
+            }
+         },
+         "partial_match" : true,
+         "place_id" : "ChIJKSshOsWinkcRoOeL161IHgQ",
+         "types" : [ "locality", "political" ]
+      }
+   ],
+   "status" : "OK"
 }

@@ -39,7 +39,7 @@
             <TableColumn fx:id="boutique" prefWidth="87.0" text="Boutique" />
         </columns>
       </TableView>
-      <Hyperlink fx:id="boutcateg" layoutX="665.0" layoutY="710.0" onAction="#AjoutBC" text="ESPACE Boutique/Categorie" />
+      <Hyperlink fx:id="boutcateg" layoutX="38.0" layoutY="52.0" onAction="#AjoutBC" text="ESPACE Boutique/Categorie" />
       <JFXTextField fx:id="nomtxt" layoutX="160.0" layoutY="210.0" />
       <JFXTextField fx:id="prixtxt" layoutX="160.0" layoutY="296.0" />
       <JFXTextField fx:id="quantitetxt" layoutX="160.0" layoutY="330.0" />
@@ -54,5 +54,7 @@
       <JFXButton fx:id="reset" layoutX="268.0" layoutY="579.0" onAction="#reset" text="Reset" />
       <JFXTextField fx:id="filterfield" layoutX="916.0" layoutY="456.0" />
       <JFXComboBox fx:id="boutiquetxt" layoutX="160.0" layoutY="456.0" />
+      <Hyperlink fx:id="decon" layoutX="64.0" layoutY="29.0" onAction="#decon" text="Déconnexion" />
+      <Hyperlink fx:id="menu" layoutX="77.0" layoutY="80.0" onAction="#menu" text="Menu" />
    </children>
 </AnchorPane>

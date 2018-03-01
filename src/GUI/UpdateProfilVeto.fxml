@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="back" prefHeight="768.0" prefWidth="1360.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.UpdateProfilVetoController">
+   <children>
+      <Label layoutX="422.0" layoutY="147.0" text="NOM" />
+      <Label layoutX="422.0" layoutY="179.0" text="PERNOM" />
+      <Label layoutX="48.0" layoutY="45.0" text="Vos informations:" textFill="#f59f0b">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="422.0" layoutY="213.0" text="E-MAIL" />
+      <Label layoutX="422.0" layoutY="246.0" text="TELEPHONE" />
+      <Label layoutX="422.0" layoutY="278.0" text="RUE" />
+      <Label layoutX="422.0" layoutY="311.0" text="VILLE" />
+      <Label layoutX="422.0" layoutY="347.0" text="GOUVERNORAT" />
+      <Label layoutX="422.0" layoutY="378.0" text="CODE POSTAL" />
+      <Label layoutX="423.0" layoutY="413.0" text="IMAGE" />
+      <Label layoutX="423.0" layoutY="451.0" text="DESCRIPTION" />
+      <TextArea fx:id="desctext" layoutX="540.0" layoutY="454.0" prefHeight="74.0" prefWidth="349.0" />
+      <TextField fx:id="textnom" layoutX="540.0" layoutY="143.0" />
+      <TextField fx:id="textprenom" layoutX="540.0" layoutY="177.0" />
+      <TextField fx:id="textmail" layoutX="540.0" layoutY="210.0" />
+      <TextField fx:id="textetl" layoutX="540.0" layoutY="244.0" />
+      <TextField fx:id="textrue" layoutX="540.0" layoutY="277.0" />
+      <TextField fx:id="villetext" layoutX="540.0" layoutY="311.0" />
+      <TextField fx:id="textgouvernorat" layoutX="540.0" layoutY="344.0" />
+      <TextField fx:id="textcodepostal" layoutX="540.0" layoutY="377.0" />
+      <TextField fx:id="imagetext" layoutX="540.0" layoutY="409.0" />
+      <ImageView fx:id="imagee" fitHeight="261.0" fitWidth="412.0" layoutX="738.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="uploadbtn" layoutX="722.0" layoutY="409.0" mnemonicParsing="false" onAction="#upoald" text="UPLOAD" />
+      <Button fx:id="updatebtn" layoutX="658.0" layoutY="622.0" mnemonicParsing="false" onAction="#ModifVeto" text="modifier" />
+      <Label layoutX="423.0" layoutY="545.0" text="LOGIN" />
+      <Label layoutX="423.0" layoutY="581.0" text="PASSWORD" />
+      <TextField fx:id="logintext" layoutX="538.0" layoutY="541.0" />
+      <TextField fx:id="mdptext" layoutX="538.0" layoutY="574.0" />
+   </children>
+</AnchorPane>

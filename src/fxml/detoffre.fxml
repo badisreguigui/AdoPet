@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="660.0" prefWidth="700.0" style="-fx-background-color: rgba(109,207,246,0.4);" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.DetController">
+   <children>
+      <Label fx:id="titre" layoutX="14.0" layoutY="20.0" textFill="WHITE" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="406.0">
+         <font>
+            <Font name="Arial Bold" size="24.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Label fx:id="lieu" layoutX="14.0" layoutY="56.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="406.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow color="TRANSPARENT" />
+         </effect>
+      </Label>
+      <Label fx:id="dd" layoutX="411.0" layoutY="26.0" AnchorPane.leftAnchor="411.0" AnchorPane.rightAnchor="9.0">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow color="TRANSPARENT" />
+         </effect>
+      </Label>
+      <Label fx:id="hd" layoutX="411.0" layoutY="57.0" AnchorPane.leftAnchor="411.0" AnchorPane.rightAnchor="9.0">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow color="TRANSPARENT" />
+         </effect>
+      </Label>
+      <Label fx:id="df" layoutX="411.0" layoutY="90.0" AnchorPane.leftAnchor="411.0" AnchorPane.rightAnchor="9.0">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow color="TRANSPARENT" />
+         </effect>
+      </Label>
+      <Label fx:id="hf" layoutX="411.0" layoutY="120.0" AnchorPane.leftAnchor="411.0" AnchorPane.rightAnchor="9.0">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow color="TRANSPARENT" />
+         </effect>
+      </Label>
+      <TextArea fx:id="desc" layoutX="14.0" layoutY="94.0" prefHeight="346.0" prefWidth="382.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="304.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </TextArea>
+      <Label fx:id="visite" layoutX="14.0" layoutY="490.0" prefHeight="21.0" prefWidth="389.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="297.0">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow color="TRANSPARENT" />
+         </effect>
+      </Label>
+      <Label fx:id="prom" layoutX="14.0" layoutY="522.0" prefHeight="21.0" prefWidth="525.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="161.0">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow color="TRANSPARENT" />
+         </effect>
+      </Label>
+      <Label fx:id="nourri" layoutX="14.0" layoutY="459.0" prefHeight="21.0" prefWidth="389.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="297.0">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow color="TRANSPARENT" />
+         </effect>
+      </Label>
+      <Label fx:id="chat" layoutX="411.0" layoutY="284.0" prefHeight="21.0" prefWidth="110.0" AnchorPane.leftAnchor="411.0" AnchorPane.rightAnchor="59.0">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow color="TRANSPARENT" />
+         </effect>
+      </Label>
+      <Label fx:id="chien" layoutX="411.0" layoutY="318.0" AnchorPane.leftAnchor="411.0" AnchorPane.rightAnchor="59.0">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow color="TRANSPARENT" />
+         </effect>
+      </Label>
+      <Label fx:id="autre" layoutX="411.0" layoutY="355.0" prefHeight="21.0" prefWidth="280.0" AnchorPane.leftAnchor="411.0" AnchorPane.rightAnchor="9.0">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow color="TRANSPARENT" />
+         </effect>
+      </Label>
+      <JFXButton fx:id="service" layoutX="500.0" layoutY="610.0" onAction="#reserver" style="-fx-background-color: black;" text="Engager ce garde" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="19.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

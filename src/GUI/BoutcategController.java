@@ -6,6 +6,7 @@
 package GUI;
 import Entities.Boutique;
 import Entities.Categorie;
+import Entities.Session;
 import Services.BoutiqueService;
 import Services.CategorieService;
 import Services.ProduitService;
@@ -37,6 +38,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
@@ -98,13 +100,21 @@ public class BoutcategController implements Initializable {
     private Button modifiercateg;
     @FXML
     private Hyperlink ajoutP;
-
+    @FXML
+    private AnchorPane boutcategg;
+    @FXML
+    private Hyperlink decon;
+    
+    Session session = Session.getInstance();
+    @FXML
+    private Hyperlink menu;
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         try {
+            boutcategg.setStyle("-fx-background-image:url('file:///C:/Users/Kapio/Desktop/adopet2.jpg')");
             loadboutique();
             loadcategorie();
             // TODO
@@ -401,5 +411,24 @@ public class BoutcategController implements Initializable {
             AjoutProduitController spc = loader.getController();
             nombout.getScene().setRoot(root);
             
+    }
+
+    @FXML
+    private void decon(ActionEvent event) throws IOException {
+    session.closeSession();
+                        FXMLLoader loader = new FXMLLoader(getClass().getResource("login.fxml"));
+                        Parent root5 = loader.load();
+                        LoginController spc = loader.getController();
+                                                
+                        ajoutBout.getScene().setRoot(root5);
+    }
+
+    @FXML
+    private void menu(ActionEvent event) throws IOException {
+                        FXMLLoader loader = new FXMLLoader(getClass().getResource("Acceuil_1.fxml"));
+                        Parent root5 = loader.load();
+                        AcceuilControllerAdmin spc = loader.getController();
+                                                
+                        ajoutBout.getScene().setRoot(root5);
     }
 }

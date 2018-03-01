@@ -154,6 +154,8 @@ public class FXMLGmapsController implements Initializable {
     private AnchorPane pane;
     
     Image image1;
+    @FXML
+    private JFXButton goHome;
 
     
 
@@ -163,6 +165,20 @@ public class FXMLGmapsController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) { 
         pane.setStyle("-fx-background-image: url('images/adopet3.jpg');");
+        
+        goHome.setStyle(
+                
+                "-fx-min-width: 70px; " +
+                "-fx-min-height: 70px; " +
+                "-fx-max-width: 140px; " +
+                "-fx-max-height: 140px;"
+        );
+        File file4 = new File("C:\\Users\\Public\\Pictures\\Sample Pictures\\home.png");
+        //Image image = new Image(file.toURI().toString());
+        String pt4 = file4.toURI().toString();
+        Image image4 = new Image(pt4, 70 ,70, false, false);
+        goHome.setGraphic(new ImageView(image4));
+        goHome.setText("");
         
         calcul.setStyle(
                 
@@ -1023,6 +1039,33 @@ public class FXMLGmapsController implements Initializable {
             System.out.println("aaaaa");
             System.out.println(a);
             System.out.println(b);
+            map.removeMarker(marker2);
+            googleMapView.addMapReadyListener(() -> {
+            try {
+                configureMap();
+            } catch (SQLException ex) {
+                Logger.getLogger(FXMLGmapsController.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            });
+            
+            LatLong marker2LatLong = new LatLong(userAlt, userLng);
+            MarkerOptions markerOptions2 = new MarkerOptions();
+            markerOptions2.position(marker2LatLong)
+                    .visible(Boolean.TRUE)
+                    .icon("https://media.giphy.com/media/dIPGSJ6xN57oZkd0tB/giphy.gif")
+                    .title("YOU");
+            marker2 = new Marker(markerOptions2);
+            map.addMarker(marker2);
+            
+            InfoWindowOptions infoWindowOptions2 = new InfoWindowOptions();
+            map.addUIEventHandler(marker2 ,UIEventType.click, (i -> {
+
+                System.out.println("a");
+                infoWindowOptions2.content("<h2> This is you \n at "+ marker2LatLong );
+
+                InfoWindow fredWilkeInfoWindow2 = new InfoWindow(infoWindowOptions2);
+                fredWilkeInfoWindow2.open(map, marker2);
+            }));
         }
         catch(FileNotFoundException fe)
         {
@@ -1067,6 +1110,15 @@ public class FXMLGmapsController implements Initializable {
         }       
 
        
+    }
+
+    @FXML
+    private void goHome(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("Acceuil.fxml"));
+                        Parent root5 = loader.load();
+                        AcceuilController spc = loader.getController();
+                                                
+                        field.getScene().setRoot(root5);
     }
 
     

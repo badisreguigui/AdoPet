@@ -8,6 +8,7 @@ package GUI;
 import Entities.Categorie;
 import Entities.Produit;
 import Entities.Produit.race;
+import Entities.Session;
 import Services.BoutiqueService;
 import Services.ProduitService;
 import com.jfoenix.controls.JFXComboBox;
@@ -139,6 +140,7 @@ public class AjoutProduitController implements Initializable {
     private ObservableList<Produit> filteredData = FXCollections.observableArrayList();
     @FXML
     private TextField filterfield;
+    Session session = Session.getInstance();
     
     Notifications notificationBuilder = Notifications.create().title("AdoPet")
                 .text("Votre Produit a été ajouté")
@@ -175,6 +177,10 @@ public class AjoutProduitController implements Initializable {
                 });
     @FXML
     private AnchorPane ajout;
+    @FXML
+    private Hyperlink decon;
+    @FXML
+    private Hyperlink menu;
     public AjoutProduitController() throws SQLException {
         ProduitService ps = new ProduitService();
         ok=ps.DisplayAll();
@@ -577,6 +583,25 @@ public class AjoutProduitController implements Initializable {
         }
     };
 }
+
+    @FXML
+    private void decon(ActionEvent event) throws IOException {
+        session.closeSession();
+                        FXMLLoader loader = new FXMLLoader(getClass().getResource("login.fxml"));
+                        Parent root5 = loader.load();
+                        LoginController spc = loader.getController();
+                                                
+                        boutiqueLabel.getScene().setRoot(root5);
+    }
+
+    @FXML
+    private void menu(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("Acceuil_1.fxml"));
+                        Parent root5 = loader.load();
+                        AcceuilControllerAdmin spc = loader.getController();
+                                                
+                        boutiqueLabel.getScene().setRoot(root5);
+    }
     }
             
            

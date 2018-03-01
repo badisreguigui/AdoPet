@@ -6,6 +6,7 @@
 package GUI;
 
 import Entities.Session;
+import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXDrawer;
 import com.jfoenix.controls.JFXHamburger;
 import com.jfoenix.transitions.hamburger.HamburgerBasicCloseTransition;
@@ -14,6 +15,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -46,6 +48,8 @@ public class AcceuilController implements Initializable {
     private JFXDrawer menu;
     
     Session session = Session.getInstance();
+    @FXML
+    private JFXButton signout;
 
 
     /**
@@ -76,4 +80,14 @@ public class AcceuilController implements Initializable {
             Logger.getLogger(AcceuilController.class.getName()).log(Level.SEVERE, null, ex);
         }
     }   
+
+    @FXML
+    private void signout(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("Login.fxml"));
+        Parent root5 = loader.load();
+        LoginController spc = loader.getController();
+        
+        session.closeSession();
+        welcome.getScene().setRoot(root5);
+    }
 }

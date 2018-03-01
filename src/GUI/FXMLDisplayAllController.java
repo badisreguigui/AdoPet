@@ -152,6 +152,10 @@ public class FXMLDisplayAllController implements Initializable {
     Session session = Session.getInstance();
     @FXML
     private AnchorPane pane;
+    @FXML
+    private JFXButton goHome;
+    @FXML
+    private JFXButton addPet;
   
     //private ObservableList items;
 
@@ -162,6 +166,34 @@ public class FXMLDisplayAllController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) { 
         
         pane.setStyle("-fx-background-image: url('images/adopet1.jpg');");
+        
+        addPet.setStyle(
+                
+                "-fx-min-width: 70px; " +
+                "-fx-min-height: 70px; " +
+                "-fx-max-width: 140px; " +
+                "-fx-max-height: 140px;"
+        );
+        File file5 = new File("C:\\Users\\Public\\Pictures\\Sample Pictures\\newpet.png");
+        //Image image = new Image(file.toURI().toString());
+        String pt5 = file5.toURI().toString();
+        Image image5 = new Image(pt5, 70 ,70, false, false);
+        addPet.setGraphic(new ImageView(image5));
+        addPet.setText("");
+        
+        goHome.setStyle(
+                
+                "-fx-min-width: 70px; " +
+                "-fx-min-height: 70px; " +
+                "-fx-max-width: 140px; " +
+                "-fx-max-height: 140px;"
+        );
+        File file4 = new File("C:\\Users\\Public\\Pictures\\Sample Pictures\\home.png");
+        //Image image = new Image(file.toURI().toString());
+        String pt4 = file4.toURI().toString();
+        Image image4 = new Image(pt4, 70 ,70, false, false);
+        goHome.setGraphic(new ImageView(image4));
+        goHome.setText("");
         
 //        System.out.println(session.IdSession());
         //load table data from start
@@ -1198,6 +1230,24 @@ public class FXMLDisplayAllController implements Initializable {
         // reload table
         field.clear();
         loadData();
+    }
+
+    @FXML
+    private void goHome(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("Acceuil.fxml"));
+                        Parent root5 = loader.load();
+                        AcceuilController spc = loader.getController();
+                                                
+                        field.getScene().setRoot(root5);
+    }
+
+    @FXML
+    private void addPet(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLAdd.fxml"));
+                        Parent root5 = loader.load();
+                        FXMLAddController spc = loader.getController();
+                                                
+                        field.getScene().setRoot(root5);
     }
 
 
