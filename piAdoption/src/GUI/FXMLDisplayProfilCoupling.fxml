@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import org.controlsfx.control.Rating?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.FXMLDisplayProfilCouplingController">
+   <children>
+      <Label fx:id="nameLabel" layoutX="266.0" layoutY="57.0" text="Label" />
+      <Label fx:id="breedLabel" layoutX="266.0" layoutY="115.0" text="Label" />
+      <ImageView fx:id="imageView" fitHeight="150.0" fitWidth="200.0" layoutX="36.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true" />
+      <Rating fx:id="ratingBar" layoutX="60.0" layoutY="322.0" onMouseClicked="#rateMe" />
+      <Label fx:id="checkIfRated" layoutX="107.0" layoutY="299.0" />
+      <PieChart fx:id="pieChart" layoutX="272.0" layoutY="156.0" prefHeight="230.0" prefWidth="314.0" />
+   </children>
+</AnchorPane>

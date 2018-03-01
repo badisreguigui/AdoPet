@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="pane" prefHeight="769.0" prefWidth="1360.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.FXMLDisplayAllController">
+   <children>
+      <TableView fx:id="tableUser" layoutX="415.0" layoutY="217.0" onMouseClicked="#check" prefHeight="308.0" prefWidth="531.0">
+        <columns>
+          <TableColumn fx:id="Cimage" prefWidth="315.0" text="Image" />
+          <TableColumn fx:id="Cgovernate" prefWidth="215.0" text="name" />
+            <TableColumn fx:id="Cbreed" minWidth="0.0" prefWidth="0.0" text="breed" />
+            <TableColumn fx:id="Csex" maxWidth="70.0" minWidth="0.0" prefWidth="0.0" text="sex" />
+            <TableColumn fx:id="Cname" maxWidth="70.0" minWidth="0.0" prefWidth="0.0" text="name" />
+            <TableColumn fx:id="Cage" maxWidth="60.0" minWidth="0.0" prefWidth="0.0" text="age" />
+            <TableColumn fx:id="Cbreed" maxWidth="50.0" minWidth="0.0" prefWidth="0.0" text="breed" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="btnLoad" layoutX="446.0" layoutY="525.0" onAction="#loadDataFromDatabase" text="REFRESH">
+         <font>
+            <Font size="6.0" />
+         </font></JFXButton>
+      <ButtonBar fx:id="matching" layoutX="296.0" layoutY="611.0" prefHeight="40.0" prefWidth="200.0" />
+      <JFXButton fx:id="profile" layoutX="7.0" layoutY="4.0" onAction="#showProfile" text="MY PETS" />
+      <TextField fx:id="field" layoutX="563.0" layoutY="156.0" onAction="#searchAction" onKeyTyped="#searchFor" prefHeight="40.0" prefWidth="257.0" />
+      <JFXButton fx:id="clearSearch" layoutX="785.0" layoutY="156.0" onAction="#clearSearch" prefHeight="40.0" prefWidth="35.0" text="X" />
+      <Button fx:id="likeBtn" layoutX="986.0" layoutY="313.0" mnemonicParsing="false" onAction="#matchAction" text="Button" />
+      <Button fx:id="dislike" layoutX="223.0" layoutY="313.0" mnemonicParsing="false" onAction="#dislikeAction" text="Button" />
+      <JFXButton fx:id="openadd" layoutX="1234.0" layoutY="17.0" onAction="#openadd" text="ADD PROFILE" />
+      <JFXButton fx:id="goHome" layoutX="1278.0" layoutY="678.0" onAction="#goHome" />
+   </children>
+</AnchorPane>

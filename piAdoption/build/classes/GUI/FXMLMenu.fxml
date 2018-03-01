@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" fx:id="pane" prefHeight="768.0" prefWidth="1360.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.FXMLMenuController">
+   <children>
+      <Button fx:id="openC" layoutX="95.0" layoutY="209.0" mnemonicParsing="false" onAction="#openC" prefHeight="298.0" prefWidth="414.0" text="coupling" />
+      <Button fx:id="openA" layoutX="709.0" layoutY="211.0" mnemonicParsing="false" onAction="#openA" prefHeight="306.0" prefWidth="404.0" text="adoption" />
+   </children>
+</AnchorPane>
