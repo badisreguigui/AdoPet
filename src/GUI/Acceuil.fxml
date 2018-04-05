@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="acc" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="768.0" prefWidth="1360.0" style="-fx-background-image: url(&quot;/Images/adopet2.jpg&quot;);" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.AcceuilController">
+   <children>
+      <JFXHamburger fx:id="mmain" layoutX="14.0" layoutY="14.0" prefHeight="31.0" />
+      <TextArea fx:id="desc" layoutX="213.0" layoutY="214.0" prefHeight="200.0" prefWidth="526.0" style="-fx-border-width: 5px; -fx-border-color: black;" text="AdoPet est une platforme dédiée aux animaux et leurs besoins," AnchorPane.leftAnchor="417.0" AnchorPane.rightAnchor="417.0">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+      </TextArea>
+      <JFXDrawer fx:id="menu" defaultDrawerSize="200.0" layoutY="45.0" prefHeight="723.0" prefWidth="1360.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <Label fx:id="welcome" prefHeight="91.0" prefWidth="205.0" style="-fx-background-image: url(&quot;/Images/glow.gif&quot;);" text="     Bienvenue sur AdoPet" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" AnchorPane.leftAnchor="577.5" AnchorPane.rightAnchor="577.5" AnchorPane.topAnchor="100.0">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="signout" layoutX="1238.0" layoutY="17.0" onAction="#signout" text="DISCONNECT" />
+   </children>
+</AnchorPane>

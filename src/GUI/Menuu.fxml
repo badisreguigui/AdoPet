@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="vbox" prefHeight="603.0" prefWidth="199.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.MenuuController">
+   <children>
+      <JFXButton fx:id="btnaa" onAction="#Adoptionlink" prefHeight="100.5" prefWidth="199.0" style="-fx-border-color: black;" text="Adoption" />
+      <JFXButton fx:id="btnveto" onAction="#Vetoslink" prefHeight="100.5" prefWidth="199.0" style="-fx-border-color: black;" text="Vétérinaires" />
+      <JFXButton fx:id="btnpets" accessibleText="petsitting" onAction="#goToPetSitting" prefHeight="100.5" prefWidth="199.0" style="-fx-border-color: black;" text="PetSitting" />
+      <JFXButton fx:id="btnevent" onAction="#Eventslink" prefHeight="100.5" prefWidth="199.0" style="-fx-border-color: black;" text="Evenements" />
+      <JFXButton fx:id="btnshop" onAction="#shoplink" prefHeight="100.5" prefWidth="199.0" style="-fx-border-color: black;" text="e-Shop" />
+      <JFXButton fx:id="btnpub" onAction="#bavardonslink" prefHeight="100.5" prefWidth="199.0" style="-fx-border-color: black;" text="Bavardons Ensemble" />
+      <JFXButton fx:id="btnacc" onAction="#accouplementlink" prefHeight="104.0" prefWidth="199.0" style="-fx-border-color: black;" text=" Accouplement" />
+   </children>
+</VBox>

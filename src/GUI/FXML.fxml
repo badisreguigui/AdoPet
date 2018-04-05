@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXColorPicker?>
+<?import com.jfoenix.controls.JFXMasonryPane?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXRippler?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.validation.NumberValidator?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.FXMLController">
+   <children>
+      <Button fx:id="addProfile" layoutX="1507.0" layoutY="463.0" mnemonicParsing="false" onAction="#addProfile" prefHeight="78.0" prefWidth="216.0" text="ADD PROFILE">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Button>
+      <Label fx:id="titleLabel" layoutX="670.0" layoutY="-5.0" prefHeight="82.0" prefWidth="572.0" text="NEW PET PROFILE INFORMATION">
+         <font>
+            <Font size="33.0" />
+         </font>
+      </Label>
+      <Label fx:id="breedLabel" layoutX="117.0" layoutY="106.0" text="BREED">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="ageLabel" layoutX="119.0" layoutY="161.0" text="AGE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="colorLabel" layoutX="115.0" layoutY="295.0" text="COLOR">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="breed" layoutX="309.0" layoutY="101.0" />
+      <TextField fx:id="age" layoutX="308.0" layoutY="171.0" />
+      <TextField fx:id="color" layoutX="305.0" layoutY="295.0" />
+      <Label fx:id="governateLabel" layoutX="126.0" layoutY="370.0" text="GOVERNATE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="cityLabel" layoutX="135.0" layoutY="439.0" text="CITY">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="zipLabel" layoutX="135.0" layoutY="525.0" text="ZIP">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="descriptionLabel" layoutX="138.0" layoutY="737.0" text="DESCRIPTION">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="imageLabel" layoutX="124.0" layoutY="612.0" text="IMAGE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="description" layoutX="355.0" layoutY="743.0" prefHeight="196.0" prefWidth="704.0" />
+      <TextField fx:id="governate" layoutX="349.0" layoutY="370.0" />
+      <TextField fx:id="city" layoutX="285.0" layoutY="439.0" />
+      <TextField fx:id="zip" layoutX="285.0" layoutY="538.0" />
+      <TextField fx:id="image" layoutX="305.0" layoutY="612.0" />
+      <TextField fx:id="sex" layoutX="335.0" layoutY="229.0" />
+      <Label fx:id="sexLabel1" layoutX="123.0" layoutY="236.0" text="sex">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="nameLabel" layoutX="131.0" layoutY="68.0" text="NAME">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="name" layoutX="309.0" layoutY="55.0" />
+      <JFXButton layoutX="802.0" layoutY="249.0" />
+      <JFXCheckBox layoutX="788.0" layoutY="313.0" />
+      <JFXColorPicker layoutX="776.0" layoutY="184.0" />
+      <JFXMasonryPane layoutX="826.0" layoutY="383.0" />
+      <JFXRippler layoutX="747.0" layoutY="383.0" />
+      <JFXRadioButton layoutX="760.0" layoutY="132.0" />
+      <NumberValidator layoutX="861.0" layoutY="452.0" />
+      <JFXTextArea layoutX="499.0" layoutY="422.0" />
+      <JFXTextField layoutX="519.0" layoutY="115.0" />
+   </children>
+</AnchorPane>

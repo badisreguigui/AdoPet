@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" fx:id="pane" prefHeight="768.0" prefWidth="1360.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.FXMLDisplayMyPetProfileController">
+   <children>
+      <Label fx:id="name" layoutX="963.0" layoutY="91.0" prefHeight="17.0" prefWidth="120.0" text="nom" />
+      <ImageView fx:id="imageView" fitHeight="366.0" fitWidth="532.0" layoutX="116.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="breed" layoutX="963.0" layoutY="127.0" text="Label" />
+      <Label fx:id="age" layoutX="964.0" layoutY="168.0" text="Label" />
+      <Label fx:id="sex" layoutX="964.0" layoutY="209.0" text="Label" />
+      <Label fx:id="color" layoutX="963.0" layoutY="254.0" text="Label" />
+      <Label fx:id="city" layoutX="963.0" layoutY="304.0" text="Label" />
+      <Label fx:id="type" layoutX="962.0" layoutY="352.0" text="Label" />
+      <Label fx:id="typePet" layoutX="963.0" layoutY="397.0" text="Label" />
+      <Label fx:id="description" layoutX="963.0" layoutY="437.0" text="Label" />
+      <JFXButton fx:id="edit" layoutX="267.0" layoutY="577.0" onAction="#edit" prefHeight="46.0" prefWidth="230.0" text="EDIT MY PROFILE" />
+      <JFXButton fx:id="delete" layoutX="907.0" layoutY="577.0" onAction="#delete" text="DESACTIVATE MY PROFILE" />
+      <Label layoutX="826.0" layoutY="91.0" text="NAME" />
+      <Label layoutX="827.0" layoutY="128.0" text="BREED" />
+      <Label layoutX="828.0" layoutY="168.0" text="AGE" />
+      <Label layoutX="828.0" layoutY="210.0" text="SEX" />
+      <Label layoutX="827.0" layoutY="255.0" text="COLOR" />
+      <Label layoutX="827.0" layoutY="305.0" text="CITY" />
+      <Label layoutX="828.0" layoutY="353.0" text="PROFILE TYPE" />
+      <Label layoutX="826.0" layoutY="398.0" text="PET'S TYPE" />
+      <Label layoutX="826.0" layoutY="439.0" text="DESCRIPTION" />
+   </children>
+</AnchorPane>

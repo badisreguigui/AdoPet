@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import jfxtras.scene.control.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="Anchordemande" prefHeight="768.0" prefWidth="1360.0" style="-fx-background-size: 1360 768;" styleClass="mainFxmlClass" stylesheets="@../CSS/ajoutdemande.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AjoutDemandeController">
+   <children>
+      <Pane fx:id="panedemande" layoutX="88.0" layoutY="48.0" prefHeight="507.0" prefWidth="706.0" style="-fx-background-color: rgba(210,207,207,0.4);" AnchorPane.bottomAnchor="200.0" AnchorPane.leftAnchor="327.0" AnchorPane.rightAnchor="327.0" AnchorPane.topAnchor="20.0">
+         <children>
+            <Label fx:id="loffre" layoutX="165.5" layoutY="15.0" prefHeight="34.0" prefWidth="375.0" text="Formulaire demande de pet sitting" textFill="WHITE">
+               <contextMenu>
+                  <ContextMenu>
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                     </items>
+                  </ContextMenu>
+               </contextMenu>
+               <font>
+                  <Font name="System Bold Italic" size="23.0" />
+               </font>
+               <effect>
+                  <DropShadow spread="0.3" />
+               </effect>
+            </Label>
+            <TextArea fx:id="Desc" layoutX="11.0" layoutY="282.0" prefHeight="140.0" prefWidth="217.0" />
+            <DatePicker fx:id="dd" layoutX="503.0" layoutY="117.0" prefHeight="31.0" prefWidth="195.0" promptText="Cliquez sur l'icone -&gt;" />
+            <DatePicker fx:id="df" layoutX="503.0" layoutY="172.0" prefHeight="31.0" prefWidth="195.0" promptText="Cliquez sur l'icone -&gt;" />
+            <Label fx:id="ldd" layoutX="503.0" layoutY="99.0" text="Date début :" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+               <effect>
+                  <DropShadow spread="0.3" />
+               </effect>
+            </Label>
+            <Label fx:id="ldf" layoutX="503.0" layoutY="154.0" text="Date fin:" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+               <effect>
+                  <DropShadow spread="0.3" />
+               </effect>
+            </Label>
+            <Label fx:id="ldesc" layoutX="11.0" layoutY="264.0" text="Description :" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+               <effect>
+                  <DropShadow spread="0.3" />
+               </effect>
+            </Label>
+            <TextField fx:id="prix" layoutX="503.0" layoutY="337.0" prefHeight="31.0" prefWidth="176.0" promptText="exemple: 15" />
+            <Label fx:id="lprix" layoutX="503.0" layoutY="319.0" text="Budget/jour (en dt) :" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+               <effect>
+                  <DropShadow spread="0.3" />
+               </effect>
+            </Label>
+            <Label fx:id="ltel" layoutX="11.0" layoutY="209.0" text="Numéro tél." textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+               <effect>
+                  <DropShadow spread="0.3" />
+               </effect>
+            </Label>
+            <TextField fx:id="tel" layoutX="11.0" layoutY="227.0" promptText="Exemple: 71586947" />
+            <Label fx:id="llieu" layoutX="11.0" layoutY="154.0" text="Lieu :" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+               <effect>
+                  <DropShadow spread="0.3" />
+               </effect>
+            </Label>
+            <MenuButton fx:id="typeA" layoutX="284.0" layoutY="172.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="138.0" text="Type d'animal">
+               <items>
+                  <MenuItem mnemonicParsing="false">
+                     <graphic>
+                        <CheckBox fx:id="chien" mnemonicParsing="false" onAction="#annuleCA" text="chien" />
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false">
+                     <graphic>
+                        <CheckBox fx:id="chat" mnemonicParsing="false" onAction="#annuleCHA" text="chat" />
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false">
+                     <graphic>
+                        <CheckBox fx:id="autre" mnemonicParsing="false" onAction="#annuleCC" text="autre" />
+                     </graphic>
+                  </MenuItem>
+               </items>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </MenuButton>
+            <MenuButton fx:id="prefM" layoutX="284.0" layoutY="227.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="138.0" text="Voulez vous?">
+               <items>
+                  <MenuItem mnemonicParsing="false">
+                     <graphic>
+                        <CheckBox fx:id="Nouri" mnemonicParsing="false" text="Nourriture" />
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false">
+                     <graphic>
+                        <CheckBox fx:id="prome" mnemonicParsing="false" text="Promenade" />
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false">
+                     <graphic>
+                        <CheckBox fx:id="Viste" mnemonicParsing="false" text="Visite" />
+                     </graphic>
+                  </MenuItem>
+               </items>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </MenuButton>
+            <Label layoutX="503.0" layoutY="209.0" text="Heure début" textFill="WHITE">
+               <effect>
+                  <DropShadow spread="0.3" />
+               </effect>
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="503.0" layoutY="264.0" text="Heure fin" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+               <effect>
+                  <DropShadow spread="0.3" />
+               </effect>
+            </Label>
+            <TextField fx:id="lieu" layoutX="11.0" layoutY="172.0" />
+            <LocalTimeTextField fx:id="hd" layoutX="503.0" layoutY="227.0" prefHeight="31.0" prefWidth="195.0" promptText="Cliquez sur l'icone -&gt;" />
+            <LocalTimeTextField fx:id="hf" layoutX="503.0" layoutY="282.0" prefHeight="31.0" prefWidth="195.0" promptText="Cliquez sur l'icone -&gt;" />
+            <JFXButton fx:id="Btn" layoutX="224.0" layoutY="455.0" onAction="#ajouterDemande" prefHeight="41.0" prefWidth="258.0" style="-fx-background-color: black;" text="Déposez votre demande" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="19.0" />
+               </font>
+            </JFXButton>
+            <TextField fx:id="titre" layoutX="11.0" layoutY="117.0" promptText="titre de votre demande" />
+            <Label fx:id="ltitre" layoutX="11.0" layoutY="99.0" text="Titre :" textFill="WHITE">
+               <effect>
+                  <DropShadow spread="0.3" />
+               </effect>
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="progressing" fitHeight="584.0" fitWidth="1082.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/progressing.gif" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <JFXButton fx:id="back" onAction="#retour" text=" ">
+         <graphic>
+            <ImageView fitHeight="56.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/back.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+   </children>
+   <effect>
+      <Glow />
+   </effect>
+</AnchorPane>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="back" prefHeight="768.0" prefWidth="1360.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.FormulaireBudgetController">
+   <children>
+      <Label layoutX="274.0" layoutY="101.0" prefHeight="27.0" prefWidth="240.0" text="Veuillez choisir s'il vous plait:">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Button fx:id="retourbtn" layoutX="608.0" layoutY="578.0" mnemonicParsing="false" onAction="#retourner" prefHeight="39.0" prefWidth="144.0" text="Retourner au profil" />
+      <Label fx:id="prixlabel" layoutX="843.0" layoutY="145.0" />
+      <CheckBox fx:id="consultationcheck" layoutX="565.0" layoutY="178.0" mnemonicParsing="false" onAction="#consultationaction" text="Consultation">
+         <font>
+            <Font size="20.0" />
+         </font></CheckBox>
+      <CheckBox fx:id="vaccincheck" layoutX="565.0" layoutY="237.0" mnemonicParsing="false" onAction="#vaccinAction" text="Vaccin chat">
+         <font>
+            <Font size="20.0" />
+         </font></CheckBox>
+      <Label fx:id="consultationlbl" layoutX="748.0" layoutY="177.0">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Label fx:id="vaccinlbl" layoutX="749.0" layoutY="235.0">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Label fx:id="sommelbl" layoutX="699.0" layoutY="355.0" prefHeight="17.0" prefWidth="82.0" />
+      <CheckBox fx:id="chiencheck" layoutX="565.0" layoutY="294.0" mnemonicParsing="false" onAction="#chienAction" text="Vaccin chien">
+         <font>
+            <Font size="20.0" />
+         </font></CheckBox>
+      <CheckBox fx:id="sterilisationcheck" layoutX="564.0" layoutY="348.0" mnemonicParsing="false" onAction="#sterilisationAction" text="Stérilisation">
+         <font>
+            <Font size="20.0" />
+         </font></CheckBox>
+      <CheckBox fx:id="analysecheck" layoutX="565.0" layoutY="398.0" mnemonicParsing="false" onAction="#analyseAction" text="Analyse">
+         <font>
+            <Font size="20.0" />
+         </font></CheckBox>
+      <Label fx:id="chienlbl" layoutX="749.0" layoutY="294.0">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Label fx:id="sterilisationlbl" layoutX="748.0" layoutY="348.0">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Label fx:id="analyselbl" layoutX="749.0" layoutY="398.0">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Label layoutX="599.0" layoutY="504.0" text="Votre toltal est :">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <Button fx:id="recherche" layoutX="23.0" layoutY="37.0" mnemonicParsing="false" onAction="#recherche" text="Button" />
+   </children>
+</AnchorPane>

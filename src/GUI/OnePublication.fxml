@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="back" prefHeight="700.0" prefWidth="1340.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.OnePublicationController">
+   <children>
+      <HBox fx:id="post" layoutX="282.0" layoutY="43.0" prefHeight="240.0" prefWidth="732.0" style="-fx-border-style: 10;">
+         <children>
+            <Label fx:id="photo" />
+            <VBox prefHeight="190.0" prefWidth="538.0">
+               <children>
+                  <HBox prefHeight="45.0" prefWidth="428.0">
+                     <children>
+                        <Label fx:id="type" alignment="TOP_LEFT" prefHeight="15.0" prefWidth="150.0" text="type                                        " textOverrun="CLIP">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="date" alignment="CENTER_RIGHT" prefHeight="15.0" prefWidth="130.0" text="date                    " />
+                        <Label alignment="TOP_RIGHT" prefHeight="15.0" prefWidth="15.0" text="at" />
+                        <Label fx:id="time" alignment="CENTER_RIGHT" prefHeight="15.0" prefWidth="40.0" text="heure" />
+                     </children>
+                  </HBox>
+                  <Label fx:id="description" />
+               </children>
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox fx:id="signalbox" prefHeight="210.0" prefWidth="98.0">
+               <children>
+                  <HBox fx:id="visible" prefHeight="186.0" prefWidth="123.0">
+                     <children>
+                        <Label fx:id="supprimer" />
+                        <Label fx:id="modifier" />
+                     </children>
+                  </HBox>
+                  <JFXButton onAction="#signaler" prefHeight="30.0" prefWidth="59.0" text="Signaler" textFill="RED" />
+               </children>
+            </VBox>
+         </children>
+         <opaqueInsets>
+            <Insets top="10.0" />
+         </opaqueInsets>
+      </HBox>
+      <HBox fx:id="ajoutcom" layoutX="282.0" layoutY="545.0" prefHeight="109.0" prefWidth="732.0" />
+      <ListView fx:id="lista" layoutX="282.0" layoutY="284.0" prefHeight="249.0" prefWidth="732.0" />
+      <Label fx:id="retour" layoutX="68.0" layoutY="66.0" />
+   </children>
+</AnchorPane>

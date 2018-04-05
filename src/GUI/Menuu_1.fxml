@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="vbox" prefHeight="603.0" prefWidth="199.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.MenuuController_1">
+   <children>
+      <JFXButton fx:id="btnveto" onAction="#Vetoslink" prefHeight="100.5" prefWidth="199.0" style="-fx-border-color: black;" text="Vétérinaires" />
+      <JFXButton fx:id="btnpets" accessibleText="petsitting" onAction="#goToPetSitting" prefHeight="100.5" prefWidth="199.0" style="-fx-border-color: black;" text="PetSitting" />
+      <JFXButton fx:id="btnevent" onAction="#Eventslink" prefHeight="100.5" prefWidth="199.0" style="-fx-border-color: black;" text="Evenements" />
+      <JFXButton fx:id="btnshop" onAction="#shoplink" prefHeight="100.5" prefWidth="199.0" style="-fx-border-color: black;" text="e-Shop" />
+   </children>
+</VBox>
