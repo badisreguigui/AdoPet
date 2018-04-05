@@ -1,0 +1,78 @@
+{% extends ":Layout:LayoutBack.html.twig" %}
+
+{% block main %}
+
+    <div class="content mt-3">
+
+        <div class="card">
+            <div class="card-header">
+                <strong class="card-title">Basic Table</strong>
+            </div>
+            <div class="card-body">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Nom</th>
+                        <th scope="col">Prenom</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Telephone</th>
+                        <th scope="col">Rue</th>
+                        <th scope="col">Ville</th>
+                        <th scope="col">Gouvernorat</th>
+                        <th scope="col">Code Postal</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">  </th>
+
+                    </tr>
+                    </thead>
+                    {% for users in users %}
+                        <tbody>
+                        <tr>
+                            <td class="py-1">
+                                {{ users.nom }}
+                            </td>
+                            <td>
+                                {{ users.prenom }}
+                            </td>
+                            <td>
+                                {{ users.email }}
+                            </td>
+                            <td>
+                                {{ users.telephone }}
+                            </td>
+                            <td>
+                                {{ users.rue }}
+                            </td>
+                            <td>
+                                {{ users.ville}}
+                            </td>
+                            <td>
+                                {{ users.gouvernorat }}
+                            </td>
+                            <td>
+                                {{ users.codePostal }}
+                            </td>
+                            <td>
+                                {{ users.description }}
+                            </td>
+                            <td>
+                                <a class="btn btn-danger" href="{{  path('supp',{'id': users.id }) }}">Supprimer</a>
+
+                            </td>
+
+                        </tr>
+
+
+
+
+
+
+                        </tbody>
+                    {% endfor %}
+
+                </table>
+            </div>
+        </div>
+    </div>
+
+{% endblock main %}

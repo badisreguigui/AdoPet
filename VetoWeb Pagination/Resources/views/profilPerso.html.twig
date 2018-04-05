@@ -1,0 +1,72 @@
+{% extends ":Layout:Layout.html.twig" %}
+
+{% block content %}
+    <!--Inner Banner Content Start-->
+    <section class="cp-inner-banner">
+        <div class="container">
+            <div class="cp-inner-banner-outer">
+                <h2>Le Profil du veto</h2>
+                <!--Breadcrumb Start-->
+                <ul class="breadcrumb">
+                    <li><a href="index.html">Home</a></li>
+                    <li>Pages</li>
+                    <li class="active">Your details</li>
+                </ul><!--Breadcrumb End-->
+            </div>
+        </div>
+    </section><!--Inner Banner Content End-->
+
+    <!--Main Content Start-->
+    <div class="cp-main-content">
+
+        <!--Team Detail Section Start-->
+        <section class="cp-team-detail">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12">
+                        <!--Team Thumb Start-->
+                        <figure class="cp-team-thumb">
+                            <img src="{{ asset('images/'~users.image) }}" alt="">
+                        </figure><!--Team Thumb End-->
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <!--About Text Start-->
+                        <div class="cp-about-text">
+                            <h3>Hello, I am Dr {{ users.nom }} {{ users.prenom }}</h3>
+
+                            <div class="cp-top">
+                                <div class="footer_contacts">
+                                    <span class=class="desination"></span>
+                                    {{ users.rue }}, {{ users.ville }}, {{ users.gouvernorat}}, {{ users.codePostal }}<br>
+                                    <span class=class="desination"></span>
+                                    {{ users.email }}<br>
+                                    <span class=class="desination"></span>
+                                    +(216){{ users.telephone}}<br>
+                                </div>
+                            </div>
+
+                            <p class="first"> {{ users.description}}</p>
+
+                            <a href="{{  path('NewTarif',{'id_veto':users.id}) }}" class="cp-btn-style3">Mes tarifs </a>
+                            <br>
+
+                            <br>
+                            <a href="{{  path('modifier',{'id': users.id} )  }}" class="cp-btn-style3">Mes cordonnées</a>
+                            <br>
+
+                            <br>
+                            <a href="{{  path('listRdv') }}" class="cp-btn-style3">Mes Rendez-vous </a>
+
+
+                        </div><!--About Text End-->
+
+                    </div>
+                </div>
+            </div>
+        </section><!--Team Detail Section End-->
+
+
+
+
+    </div><!--Main Content End-->
+{% endblock content %}

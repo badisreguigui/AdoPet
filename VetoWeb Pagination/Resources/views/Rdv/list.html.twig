@@ -1,0 +1,105 @@
+{% extends ":Layout:Layout.html.twig" %}
+
+{% block content %}
+    <!--Inner Banner Content Start-->
+    <section class="cp-inner-banner">
+        <div class="container">
+            <div class="cp-inner-banner-outer">
+                <h2>Rendez-vous</h2>
+                <!--Breadcrumb Start-->
+                <ul class="breadcrumb">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="active">Rendez-vous</li>
+                </ul><!--Breadcrumb End-->
+            </div>
+        </div>
+    </section><!--Inner Banner Content End-->
+
+
+
+    <!--Main Content Start-->
+    <div class="cp-main-content">
+
+        <!--Checkout Section Start-->
+        <section class="cp-checkout-section pd-t100">
+            <div class="container">
+                <!--Checkout Form Start-->
+                <form class="cp-checkout-form" method="post">
+                    <div class="row">
+                        <section class="no_padding">
+                            <div class="container">
+
+                                <section class="post tribe_events_wrapper">
+                                    <article class="post_content">
+                                        <div id="tribe-events-pg-template">
+                                            <div id="tribe-events" class="tribe-no-js">
+                                                <div class="tribe-events-before-html"></div>
+
+                                                <div id="tribe-events-content-wrapper" class="tribe-clearfix">
+                                                    <input type="hidden" id="tribe-events-list-hash" value="">
+
+                                                    <div>
+
+
+                                                        <table>
+                                                            <thead>
+                                                            <tr>
+                                                                <th>{{  "now"|date("l")  }}</th>
+                                                                <th>Saturday  </th>
+                                                                <th>Sunday    </th>
+                                                                <th>Monday    </th>
+                                                                <th>Tuesday   </th>
+                                                                <th>Wednesday </th>
+                                                                <th>Thursday  </th>
+                                                            </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                            <tr>
+                                                                {% for i in "now"|date("d").."now"|date("d")+6 %}
+                                                                {% if i ==  "now"|date("d")%}
+                                                                <td class="tribe-events-thismonth tribe-events-present mobile-trigger tribe-event-day-26" data-day="26">
+                                                                    {% else %}
+                                                                <td class="tribe-events-thismonth tribe-events-past mobile-trigger tribe-event-day-26" data-day="26">
+                                                                    {% endif %}
+                                                                    <div>
+                                                                        {{ i }}
+                                                                    </div>
+                                                                    <div >
+
+                                                                        {% for rdv in rdvs %}
+                                                                        {% if rdv.dateRdv|date("d") ==  i%}
+                                                                        <a href="">
+                                                                            <b>heure:</b>{{ rdv.heure }}<br>
+                                                                            {% endif %}
+                                                                            {% endfor %}
+                                                                        </a>
+                                                                    </div>
+                                                                    {% endfor %}
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+
+                                                    </div>
+                                                    <div class="tribe-clear"></div>
+                                                </div>
+                                                <div class="tribe-events-after-html"></div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </section>
+
+
+
+
+
+                                <a href="index.html" class="cp-btn-style3">Go to the Home Page</a>
+                        </div><!--Cart Bottom Holder End-->
+                    </div>
+                </form><!--Checkout Form End-->
+
+
+            </div>
+        </section><!--Checkout Section End-->
+
+    </div><!--Main Content End-->
+{% endblock content %}

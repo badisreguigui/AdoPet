@@ -1,0 +1,126 @@
+{% extends ":Layout:Layout.html.twig" %}
+
+{% block content %}
+    <!--Inner Banner Content Start-->
+    <section class="cp-inner-banner">
+        <div class="container">
+            <div class="cp-inner-banner-outer">
+                <h2>Modifier mes coordonnées </h2>
+                <!--Breadcrumb Start-->
+                <ul class="breadcrumb">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="active">Modifier</li>
+
+                </ul><!--Breadcrumb End-->
+                <a href="{{  path('monProfil',{'id': users.id} )  }}" class="cp-btn-style3">Back to profil</a>
+            </div>
+        </div>
+    </section><!--Inner Banner Content End-->
+
+
+
+    <!--Main Content Start-->
+    <div class="cp-main-content">
+
+        <!--Checkout Section Start-->
+        <section class="cp-checkout-section pd-t100">
+            <div class="container">
+                <!--Checkout Form Start-->
+                <form class="cp-checkout-form" method="post">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-12">
+
+                            <!--Inner Holder Start-->
+                            <div class="inner-holder">
+                                <label>Nom</label>
+                                <input type="text" name="nom" value="{{ users.nom }}" required pattern="[a-zA-Z ]+">
+                            </div><!--Inner Holder End-->
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <!--Inner Holder Start-->
+                            <div class="inner-holder">
+                                <label>Prenom</label>
+                                <input type="text" name="prenom" value="{{ users.prenom }}" required pattern="[a-zA-Z ]+">
+                            </div><!--Inner Holder End-->
+                        </div>
+                        <div class="col-md-12 col-sm-12">
+                            <div class="inner-holder">
+                                <label>Mail</label>
+                                <input type="text" name="email" value="{{ users.email }}" required pattern="^[a-zA-Z0-9-\_.]+@[a-zA-Z0-9-\_.]+\.[a-zA-Z0-9.]{2,5}$">
+                            </div>
+                        </div>
+
+                        <div class="col-md-12 col-sm-12">
+                            <div class="inner-holder">
+                                <label>Rue</label>
+                                <input type="text" name="rue" value="{{ users.rue }}"required>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <div class="inner-holder">
+                                <label>Ville</label>
+                                <input type="text" name="ville" value="{{ users.ville }}" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <div class="inner-holder">
+                                <label>Gouvernorat</label>
+                                <input type="text" name="gouvernorat" value="{{ users.gouvernorat }}" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <div class="inner-holder">
+                                <label>Code Postal</label>
+                                <input type="number" name="CodePostal" value="{{ users.codePostal }}" required>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12 col-sm-12">
+                            <div class="inner-holder">
+                                <label>Telephone</label>
+                                <input type="number" name="telephone" value="{{ users.telephone }}" required>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-sm-12">
+                            <div class="inner-holder">
+                                <label>Description</label>
+                                <textarea class="textAreaSize inited" name="description" value="{{ users.description }}"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <div class="inner-holder">
+
+                                <label>Photo</label>
+                                <input type="file" name="image" class="button" value="{{ users.image }}"required>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12">
+                            <div class="inner-holder">
+                                <label>Votre Login</label>
+                                <input type="text" name="login" value="{{ users.login }}"required >
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12">
+                            <div class="inner-holder">
+                                <label>Mot de Passe</label>
+                                <input type="password" name="password" required >
+                            </div>
+                        </div>
+
+
+                        <div class="cp-cart-bottom">
+
+                            <input class="cp-btn-style1 btn-more"  type="submit" value="Update">
+
+                            <a href="{{  path('monProfil',{'id': users.id} )  }}" class="cp-btn-style3">Go to profil</a>
+                        </div><!--Cart Bottom Holder End-->
+                    </div>
+                </form><!--Checkout Form End-->
+
+
+            </div>
+        </section><!--Checkout Section End-->
+
+    </div><!--Main Content End-->
+{% endblock content %}

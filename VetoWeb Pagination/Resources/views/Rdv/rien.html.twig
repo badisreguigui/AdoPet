@@ -1,0 +1,24 @@
+{% extends ":Layout:Layout.html.twig" %}
+
+{% block content %}
+    <!--Inner Banner Content Start-->
+    <section class="cp-inner-banner">
+        <div class="container">
+            <div class="cp-inner-banner-outer">
+                <h2>You just booked your Appointment. </h2>
+                <h1>You will receive soon a text from us as reminder.</h1>
+
+                <figure class="cp-team-thumb">
+                    <img src="{{ asset('images/Adult-dog_calm-journey.jpg') }}" alt="">
+                </figure>
+                <br>
+
+                <a href="{{  path('list') }}" class="cp-btn-style3">Go Back</a>
+
+            </div>
+        </div>
+    </section><!--Inner Banner Content End-->
+
+
+
+{% endblock content %}

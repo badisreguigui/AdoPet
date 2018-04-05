@@ -1,0 +1,79 @@
+{% extends ":Layout:Layout.html.twig" %}
+
+{% block content %}
+    <!--Inner Banner Content Start-->
+    <section class="cp-inner-banner">
+        <div class="container">
+            <div class="cp-inner-banner-outer">
+                <h2>S'inscrire en tant que VETO</h2>
+                <!--Breadcrumb Start-->
+                <ul class="breadcrumb">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="active">s'inscrire</li>
+                </ul><!--Breadcrumb End-->
+            </div>
+        </div>
+    </section><!--Inner Banner Content End-->
+
+
+
+    <!--Main Content Start-->
+    <div class="cp-main-content">
+
+        <!--Checkout Section Start-->
+        <section class="cp-checkout-section pd-t100">
+            <div class="container">
+                <!--Checkout Form Start-->
+                <form class="cp-checkout-form" method="post">
+                    <div class="row">
+
+                        <div class="col-md-12 col-sm-12">
+                            <div class="inner-holder">
+                                <label>Consultation</label>
+                                <input type="number" name="consultation" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <div class="inner-holder">
+                                <label>Vaccination d'un chat</label>
+                                <input type="number" name="vaccinationChat" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <div class="inner-holder">
+                                <label>Vaccination d'un chien</label>
+                                <input type="number" name="vaccinationChien" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <div class="inner-holder">
+                                <label>Stérilisation</label>
+                                <input type="number" name="sterilisation" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <div class="inner-holder">
+                                <label>Analyse</label>
+                                <input type="number" name="analyses" required>
+                            </div>
+                        </div>
+
+
+
+
+
+                        <div class="cp-cart-bottom">
+
+                            <input class="cp-btn-style1 btn-more" type="submit" value="Save">
+
+                            <a href="index.html" class="cp-btn-style3">Go to the Home Page</a>
+                        </div><!--Cart Bottom Holder End-->
+                    </div>
+                </form><!--Checkout Form End-->
+
+
+            </div>
+        </section><!--Checkout Section End-->
+
+    </div><!--Main Content End-->
+{% endblock content %}

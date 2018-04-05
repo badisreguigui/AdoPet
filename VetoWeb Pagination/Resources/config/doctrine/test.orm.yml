@@ -1,0 +1,11 @@
+VetsBundle\Entity\test:
+    type: entity
+    table: null
+    repositoryClass: VetsBundle\Repository\testRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    lifecycleCallbacks: {  }
