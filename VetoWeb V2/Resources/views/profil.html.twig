@@ -1,0 +1,132 @@
+{% extends ":Layout:Layout.html.twig" %}
+
+{% block content %}
+<!--Inner Banner Content Start-->
+<section class="cp-inner-banner">
+    <div class="container">
+        <div class="cp-inner-banner-outer">
+            <h2>Le Profil du veto</h2>
+            <!--Breadcrumb Start-->
+            <ul class="breadcrumb">
+                <li><a href="index.html">Home</a></li>
+                <li>Pages</li>
+                <li class="active">Our vets detail</li>
+            </ul><!--Breadcrumb End-->
+        </div>
+    </div>
+</section><!--Inner Banner Content End-->
+
+<!--Main Content Start-->
+<div class="cp-main-content">
+
+    <!--Team Detail Section Start-->
+    <section class="cp-team-detail">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+                    <!--Team Thumb Start-->
+                    <figure class="cp-team-thumb">
+                        <img src="{{ asset('images/'~users.image) }}" alt="">
+                    </figure><!--Team Thumb End-->
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <!--About Text Start-->
+                    <div class="cp-about-text">
+                        <h3>Hello, I am Dr {{ users.nom }} {{ users.prenom }}</h3>
+
+                        <div class="cp-top">
+                            <div class="footer_contacts">
+                                <span class=class="desination"></span>
+                                {{ users.rue }}, {{ users.ville }}, {{ users.gouvernorat}}, {{ users.codePostal }}<br>
+                                <span class=class="desination"></span>
+                                {{ users.email }}<br>
+                                <span class=class="desination"></span>
+                                +(216){{ users.telephone}}<br>
+                            </div>
+                        </div>
+
+                        <p class="first"> {{ users.description}}</p>
+
+                        <a href="{{  path('ajouterRendezVous',{'id':users.id}) }}" class="cp-btn-style3">Prendre un rendez-vous</a>    <a href="{{ path('list_tarif',{'idvet':users.id}) }}" class="cp-btn-style3">Demander Budget</a>
+
+                    </div><!--About Text End-->
+
+                </div>
+            </div>
+        </div>
+    </section><!--Team Detail Section End-->
+
+
+    <!--Testimonial Section Start-->
+    <section class="cp-testimonial-section pd-tb100">
+        <div class="container">
+            <!--Heading Holder Start-->
+            <div class="cp-heading-style1_v2">
+                <h2>Testimonials</h2>
+            </div><!--Heading Holder End-->
+
+            <!--Services Slider Start-->
+            <div class="owl-carousel" id="cp-testimonial-slider">
+                <div class="item">
+                    <!--Services Box Start-->
+                    <article class="cp-testimonial-item">
+                        <div class="cp-top-holder">
+                            <div class="radius-img">
+                                <img src="images/testimonial-sm-01.jpg" alt="">
+                            </div>
+                            <blockquote>
+                                <p>"Thank you for taking care of my Cat. She's a big part of our family and we would have been lost with out her."</p>
+                            </blockquote>
+                        </div>
+                        <div class="bottom-holder">
+                            <h4>Victor Tihai</h4>
+                            <span>Ceo Hospital</span>
+                        </div>
+                    </article><!--Services Item End-->
+                </div>
+                <div class="item">
+                    <!--Services Box Start-->
+                    <article class="cp-testimonial-item">
+                        <div class="cp-top-holder">
+                            <div class="radius-img">
+                                <img src="images/testimonial-sm-02.jpg" alt="">
+                            </div>
+                            <blockquote>
+                                <p>“ Etiam dictum. Nunc enim. Sed massa tellus, aliquam rhoncus, venenatis quis libero. Praesent odi ”</p>
+                            </blockquote>
+                        </div>
+                        <div class="bottom-holder">
+                            <h4>John Doe</h4>
+                            <span>Owner of Pet</span>
+                        </div>
+                    </article><!--Services Item End-->
+                </div>
+                <div class="item">
+                    <!--Services Box Start-->
+                    <article class="cp-testimonial-item">
+                        <div class="cp-top-holder">
+                            <div class="radius-img">
+                                <img src="images/testimonial-sm-03.jpg" alt="">
+                            </div>
+                            <blockquote>
+                                <p>“ Etiam dictum. Nunc enim. Sed massa tellus, aliquam rhoncus, venenatis quis, suscipit ac, libero. Praesent odialiquam rhoncus,liber praesent odi ”</p>
+                            </blockquote>
+                        </div>
+                        <div class="bottom-holder">
+                            <h4>Rita Sai</h4>
+                            <span>A cat owner</span>
+                        </div>
+                    </article><!--Services Item End-->
+                </div>
+
+            </div><!--Services Slider Ends-->
+            <!--Testimonial Animate Image Start-->
+            <div class="scrollme">
+                <div class="cp-testimonial-pet animateme" data-when="span" data-from="0.4" data-to="0.9" data-opacity="0.5" data-translatex="-400" data-rotatez="10">
+                </div>
+            </div><!--Testimonial Animate Image End-->
+        </div>
+    </section><!--Testimonial Section End-->
+
+</div><!--Main Content End-->
+{% endblock content %}

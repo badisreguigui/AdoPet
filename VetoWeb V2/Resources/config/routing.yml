@@ -1,0 +1,52 @@
+vets_homepage:
+    path:     /
+    defaults: { _controller: VetsBundle:Default:index }
+list:
+    path:     /list
+    defaults: { _controller: VetsBundle:Vets:list }
+inscrireVeto:
+    path:     /inscrireVeto
+    defaults: { _controller: VetsBundle:Vets:inscrireVeto }
+
+profilVeto:
+    path:     /profilVeto/{id}/
+    defaults: { _controller: VetsBundle:Vets:profilVeto }
+
+monProfil:
+    path:     /profilPerso/{id}/
+    defaults: { _controller: VetsBundle:Vets:monProfil }
+
+modifier:
+    path:     /modifier/{id}/
+    defaults: { _controller: VetsBundle:Vets:modifier }
+
+
+listRdv:
+    path:     /listRdv
+    defaults: { _controller: VetsBundle:Rdv:listRdv }
+
+ajouterRendezVous:
+    path:     /ajouterRendezVous
+    defaults: { _controller: VetsBundle:Rdv:ajouterRendezVous }
+
+
+list_tarif:
+    path:     /listtarif
+    defaults: { _controller: VetsBundle:Tarif:Budget }
+
+NewTarif:
+    path:     /NewTarif
+    defaults: { _controller: VetsBundle:Tarif:NewTarif }
+
+rien:
+    path:     /rien
+    defaults: { _controller: VetsBundle:Rdv:rien }
+
+listBack:
+    path:     /listBack
+    defaults: { _controller: VetsBundle:Vets:listBack }
+
+supp:
+    path:     /supp/{id}/
+    defaults: { _controller: VetsBundle:Vets:supprimerBack }
+

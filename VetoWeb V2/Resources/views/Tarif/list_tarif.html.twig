@@ -1,0 +1,63 @@
+{% extends ":Layout:Layout.html.twig" %}
+
+{% block content %}
+    <!--Inner Banner Content Start-->
+    <section class="cp-inner-banner">
+        <div class="container">
+            <div class="cp-inner-banner-outer">
+                <h2>Can you please check what you want to do during your next appointment:</h2>
+
+
+            </div>
+        </div>
+    </section><!--Inner Banner Content End-->
+
+    <div class="row form-group">
+        <div class="col col-md-3"><h1>Les Tarifs: </h1></div>
+
+        {% for budget in budget %}
+        <div class="col col-md-9">
+            <div class="form-check">
+
+                <form method="post">
+
+                    <div class="checkbox">
+                        <h1>Consultation :</h1>
+                        <label for="checkbox1" class="form-check-label ">
+                            <input type="checkbox" id="checkbox1" name="consultation" value="{{ budget.consultation }}" class="form-check-input">{{ budget.consultation }} TND
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <h1>Vaccination Chat :</h1>
+                        <label for="checkbox2" class="form-check-label ">
+                            <input type="checkbox" id="checkbox2" name="vaccinationchat" value="{{ budget.vaccinationchat }}" class="form-check-input"> {{ budget.vaccinationchat }} TND
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <h1>Vaccination chien :</h1>
+                        <label for="checkbox3" class="form-check-label ">
+                            <input type="checkbox" id="checkbox3" name="vaccinationchien" value="{{ budget.vaccinationchien }}" class="form-check-input"> {{ budget.vaccinationchien }} TND
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <h1>Sterilisation :</h1>
+                        <label for="checkbox3" class="form-check-label ">
+                            <input type="checkbox" id="checkbox4" name="sterilisation" value="{{ budget.sterilisation }}" class="form-check-input">  {{ budget.sterilisation }} TND
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <h1>Analyses :</h1>
+                        <label for="checkbox3" class="form-check-label ">
+                            <input type="checkbox" id="checkbox5" name="analyses" value="{{ budget.analyses }}" class="form-check-input"> {{ budget.analyses }} TND
+                        </label>
+                    </div>
+                    <input class="cp-btn-style1 btn-more" type="submit" value="submit">
+                </form>
+
+            </div>
+
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock content %}
