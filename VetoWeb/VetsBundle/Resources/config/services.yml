@@ -1,0 +1,4 @@
+services:
+#    vets.example:
+#        class: VetsBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

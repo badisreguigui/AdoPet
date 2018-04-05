@@ -1,0 +1,75 @@
+{% extends ":Layout:Layout.html.twig" %}
+
+{% block content %}
+    <!--Inner Banner Content Start-->
+    <section class="cp-inner-banner">
+        <div class="container">
+            <div class="cp-inner-banner-outer">
+                <h2>Nos Veterinaires</h2>
+                <!--Breadcrumb Start-->
+                <ul class="breadcrumb">
+                    <li><a href="index.html">Home</a></li>
+                    <li>Pages</li>
+                    <li class="active">Nos Vetos</li>
+                </ul><!--Breadcrumb End-->
+            </div>
+        </div>
+    </section><!--Inner Banner Content End-->
+
+    <!--Main Content Start-->
+    <div class="cp-main-content">
+
+        <!--Gallery Section Start-->
+        <section class="cp-gallery-section pd-t100">
+
+            <div class="container">
+
+                <div class="row pretty-gallery">
+                    {% for u in users %}
+                    <div class="col-md-6 col-sm-12">
+                        <!--Gallery Item Start-->
+
+                        <figure class="cp-gallery-item">
+                            <img src="{{ asset('images/'~u.image) }}" alt="">
+
+                            <figcaption class="cp-caption">
+                                <div class="cp-inner">
+                                    <a href="{{  path('profilVeto',{'id': u.id} )  }}" class="gallery-btn">Dr {{ u.nom }} {{ u.prenom }}</a>
+                                    <p> {{ u.description[:150]}} (...)</p>
+                                    <ul class="cp-gallery-meta">
+                                        <li><a href="images/gallery/gallery-col2-img-01.jpg" data-rel="prettyPhoto"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-link" aria-hidden="true"></i></a></li>
+                                    </ul>
+                                </div>
+                            </figcaption>
+                        </figure><!--Gallery Item End-->
+
+                    </div>
+
+
+                    {% endfor %}
+            </div>
+
+            </div>
+
+        </section><!--Gallery Section End-->
+        <!--PAGINATION START-->
+        <div class="pagination-box">
+            <nav>
+                <ul class="pagination">
+                    <li> <a href="#" aria-label="Previous"> <span aria-hidden="true"><i class="fa fa-angle-right" aria-hidden="true"></i></span> </a> </li>
+                    <li><a href="#">1</a></li>
+                    <li class="active"><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li> <a href="#" aria-label="Next"> <span aria-hidden="true"><i class="fa fa-angle-left" aria-hidden="true"></i></span> </a> </li>
+                </ul>
+            </nav>
+        </div><!--PAGINATION END-->
+
+    </div><!--Main Content End-->
+
+
+
+{% endblock content %}
