@@ -1,0 +1,108 @@
+{% extends ":Layout:Layout.html.twig" %}
+
+{% block content %}
+    <!--Inner Banner Content Start-->
+    <section class="cp-inner-banner">
+        <div class="container">
+            <div class="cp-inner-banner-outer">
+                <h2>Can you please check what you want to do during your next appointment:</h2>
+
+                <h1> Your total is:</h1> <div id="total">
+
+                </div>
+
+
+
+            </div>
+        </div>
+    </section><!--Inner Banner Content End-->
+
+    <div class="row form-group">
+        <div class="col col-md-3"><h1>Les Tarifs: </h1></div>
+
+        {% for budget in budget %}
+        <div class="col col-md-9">
+            <div class="form-check">
+
+                <form method="post">
+
+                    <div class="checkbox">
+                        <h1>Consultation :</h1>
+                        <label for="checkbox1" class="form-check-label ">
+                            <input type="checkbox" id="consultation" name="consultation" value="{{ budget.consultation }}" class="form-check-input">{{ budget.consultation }} TND
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <h1>Vaccination Chat :</h1>
+                        <label for="checkbox2" class="form-check-label ">
+                            <input type="checkbox" id="chat" name="vaccinationchat" value="{{ budget.vaccinationchat }}" class="form-check-input"> {{ budget.vaccinationchat }} TND
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <h1>Vaccination chien :</h1>
+                        <label for="checkbox3" class="form-check-label ">
+                            <input type="checkbox" id="chien" name="vaccinationchien" value="{{ budget.vaccinationchien }}" class="form-check-input"> {{ budget.vaccinationchien }} TND
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <h1>Sterilisation :</h1>
+                        <label for="checkbox3" class="form-check-label ">
+                            <input type="checkbox" id="ster" name="sterilisation" value="{{ budget.sterilisation }}" class="form-check-input">  {{ budget.sterilisation }} TND
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <h1>Analyses :</h1>
+                        <label for="checkbox3" class="form-check-label ">
+                            <input type="checkbox" id="analyse" name="analyses" value="{{ budget.analyses }}" class="form-check-input"> {{ budget.analyses }} TND
+                        </label>
+                    </div>
+                    <!---->
+                </form>
+                <input class="cp-btn-style1 btn-more" type="submit" value="submit" onclick="calculerAjax()">
+
+
+
+            </div>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+            <script>
+                function calculerAjax(){
+                    var urlEdit = "{{ path('calculBudget', { 'consultation': "consultation", 'chat':"chat", 'chien':"chien", 'ster':"ster", 'analyse':"analyse" }) }}";
+                    //ouuuh yecer marja hal les variable maktharhom
+                    var consultation = document.getElementById('consultation').value;
+                    var chat = document.getElementById('chat').value;
+                    var chien = document.getElementById('chien').value;
+                    var ster = document.getElementById('ster').value;
+                    var analyse = document.getElementById('analyse').value;
+                    urlEdit = urlEdit.replace("consultation", consultation);
+                    urlEdit = urlEdit.replace("chat", chat);
+                    urlEdit = urlEdit.replace("chien", chien);
+                    urlEdit = urlEdit.replace("ster", ster);
+                    urlEdit = urlEdit.replace("analyse", analyse);
+                    $.ajax({
+                        method: 'GET',
+                        url: urlEdit,
+                        ifModified:true,
+                        success: function(d){
+                            console.log(d.total);
+                            document.getElementById('total').innerHTML = d.total +"TND";
+                        }
+                    });
+
+                    function calculerSimple(){ //mafhemtech chbih irafraishi wa7dou
+                        var consultation = document.getElementById('consultation').value;
+                        var chat = document.getElementById('chat').value;
+                        var chien = document.getElementById('chien').value;
+                        var ster = document.getElementById('ster').value;
+                        var analyse = document.getElementById('analyse').value;
+
+                        var Total = $consultation+chat+chien+ster+analyse;
+                        document.getElementById('total').innerHTML ="Prix Total :" + Total;
+                    }
+
+                }
+            </script>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock content %}
